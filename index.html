@@ -1379,6 +1379,14 @@
             </select>
           </div>
 
+          <div class="form-row">
+            <label for="fcommlang" data-i18n="labelCommLang">Idioma preferido para emails <span class="req">*</span></label>
+            <select id="fcommlang" name="comm_language" required>
+              <option value="pt" data-i18n="optCommPt">Português</option>
+              <option value="en" data-i18n="optCommEn">English</option>
+            </select>
+          </div>
+
           <div class="form-check">
             <input type="checkbox" id="fterms" required>
             <label for="fterms" data-i18n="checkTerms">Concordo em receber informações sobre o curso por WhatsApp e email. Posso cancelar a qualquer momento.</label>
@@ -1595,6 +1603,8 @@
         labelLevel: 'Nível de inglês',
         optRole0: 'Selecione...', optRole1: 'Personal Trainer', optRole2: 'Professor de aula em grupo', optRole3: 'Recepção / Atendimento', optRole4: 'Gestor / Coordenador', optRole5: 'Outro',
         optLevel0: 'Selecione...', optLevel1: 'Zero — não falo nada', optLevel2: 'Básico — entendo algumas palavras', optLevel3: 'Intermediário — consigo me virar',
+        labelCommLang: 'Idioma preferido para emails <span class="req">*</span>',
+        optCommPt: 'Português', optCommEn: 'English',
         checkTerms: 'Concordo em receber informações sobre o curso por WhatsApp e email. Posso cancelar a qualquer momento.',
         errorTitle: 'Corrija os erros abaixo',
         errorColField: 'Campo', errorColError: 'Erro',
@@ -1719,6 +1729,8 @@
         labelLevel: 'English level',
         optRole0: 'Select...', optRole1: 'Personal Trainer', optRole2: 'Group class instructor', optRole3: 'Front desk / Reception', optRole4: 'Manager / Coordinator', optRole5: 'Other',
         optLevel0: 'Select...', optLevel1: 'Zero — I don\'t speak any', optLevel2: 'Basic — I understand some words', optLevel3: 'Intermediate — I can get by',
+        labelCommLang: 'Preferred email language <span class="req">*</span>',
+        optCommPt: 'Português', optCommEn: 'English',
         checkTerms: 'I agree to receive course information via WhatsApp and email. I can unsubscribe at any time.',
         errorTitle: 'Please fix the errors below',
         errorColField: 'Field', errorColError: 'Error',
@@ -1905,6 +1917,7 @@
       submitBtn.textContent = lang === 'pt' ? 'Enviando...' : 'Submitting...';
 
       // Collect data
+      var commLang = document.getElementById('fcommlang').value;
       var data = {
         name: document.getElementById('fname').value.trim(),
         email: document.getElementById('femail').value.trim(),
@@ -1912,6 +1925,7 @@
         role: document.getElementById('frole').value || null,
         english_level: document.getElementById('flevel').value || null,
         language: lang,
+        comm_language: commLang,
       };
 
       try {
@@ -1928,7 +1942,13 @@
           return;
         }
 
-        // Success
+        // Success — trigger welcome email (fire-and-forget)
+        fetch(SUPABASE_URL + '/functions/v1/send-campaign', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + SUPABASE_ANON_KEY },
+          body: JSON.stringify({ email: data.email, name: data.name, comm_language: commLang, campaign_slug: 'welcome' })
+        }).catch(function () { /* welcome email is best-effort */ });
+
         formCard.classList.add('hide');
         formSuccess.classList.add('show');
         formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
