@@ -15,7 +15,7 @@ Copy and paste these into WhatsApp, iMessage, or any messaging app.
 Aprenda a atender clientes em inglês, crescer online e cobrar mais — com vocabulário real de academia.
 
 Exclusivo para equipe Silva Blue.
-Começa 26 de abril.
+Começa 3 de maio.
 
 👉 Inscreva-se: https://ingles.riofitclub.com
 ```
@@ -36,10 +36,10 @@ Estamos oferecendo um curso GRATUITO de inglês 100% focado em fitness. Não é 
 • +300 palavras de vocabulário fitness
 
 📅 CRONOGRAMA:
-• Sessão 1: Dom, 26 de Abril — Recebendo o Cliente
-• Sessão 2: Dom, 3 de Maio — Conduzindo o Treino
-• Sessão 3: Dom, 10 de Maio — Vendendo e Fidelizando
-• Sessão 4: Dom, 17 de Maio — Presença Digital em Inglês
+• Sessão 1: Dom, 3 de Maio — Recebendo o Cliente
+• Sessão 2: Dom, 10 de Maio — Conduzindo o Treino
+• Sessão 3: Dom, 17 de Maio — Vendendo e Fidelizando
+• Sessão 4: Dom, 24 de Maio — Presença Digital em Inglês
 
 ⏰ Todas às 16h, via Google Meet (1 hora por aula)
 
@@ -68,7 +68,7 @@ Dúvidas? Me mande mensagem. Vamos juntos! 💪
 
 Vocês estão convidados para o curso GRATUITO de Inglês para Fitness!
 
-4 domingos, 1 hora por aula, 100% online. Começa 26 de abril.
+4 domingos, 1 hora por aula, 100% online. Começa 3 de maio.
 
 📝 Inscreva-se: https://ingles.riofitclub.com
 💬 Entre no grupo: https://chat.whatsapp.com/HTwUtjALh1j38uWG3xqgB8?mode=gi_t
@@ -89,7 +89,7 @@ Vagas limitadas! 🔥
 Learn to serve international clients, grow your online presence, and charge premium rates — with real gym vocabulary.
 
 Exclusive for Silva Blue team.
-Starts April 26.
+Starts May 3.
 
 👉 Register: https://ingles.riofitclub.com
 ```
@@ -110,10 +110,10 @@ We're offering a FREE English course 100% focused on fitness. This isn't generic
 • 300+ fitness vocabulary words
 
 📅 SCHEDULE:
-• Session 1: Sun, April 26 — Welcoming the Client
-• Session 2: Sun, May 3 — Leading the Workout
-• Session 3: Sun, May 10 — Selling & Retaining
-• Session 4: Sun, May 17 — Digital Presence in English
+• Session 1: Sun, May 3 — Welcoming the Client
+• Session 2: Sun, May 10 — Leading the Workout
+• Session 3: Sun, May 17 — Selling & Retaining
+• Session 4: Sun, May 24 — Digital Presence in English
 
 ⏰ All sessions at 4pm, via Google Meet (1 hour each)
 
