@@ -945,41 +945,105 @@
     .mobile-cta .btn { width: 100%; padding: 1rem; }
     @media (max-width: 700px) { .mobile-cta { display: block; } body { padding-bottom: 80px; } }
 
-    /* VIDEO PLAYER */
+    /* VIDEO PLAYER — custom poster with overlay */
+    .hero-video { position: relative; }
     .hero-video video {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 12px;
     }
-    .hero-video .video-lang { display: none; }
-    .hero-video .video-lang.active { display: block; width: 100%; height: 100%; }
+    .hero-video .video-lang { display: none; position: relative; width: 100%; height: 100%; }
+    .hero-video .video-lang.active { display: block; }
 
-    /* TRANSLATE BANNER (PT only) */
-    .translate-banner {
+    /* Poster overlay with dark gradient */
+    .video-poster-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      cursor: pointer;
+      z-index: 3;
+      transition: opacity 0.3s ease;
+    }
+    .video-poster-overlay.hidden { opacity: 0; pointer-events: none; }
+    .video-poster-overlay img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    /* Dark gradient film over the poster */
+    .video-poster-overlay::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,0.3) 0%, rgba(10,10,10,0.15) 40%, rgba(10,10,10,0.5) 100%),
+        rgba(10,10,10,0.2);
+    }
+
+    /* Orange play button */
+    .video-play-btn {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      width: 88px; height: 88px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      box-shadow: 0 0 0 0 rgba(255, 90, 0, 0.7), 0 20px 60px rgba(0,0,0,0.5);
+      animation: pulse-btn 2.4s infinite;
+      transition: transform 0.2s ease;
+      cursor: pointer;
+    }
+    .video-poster-overlay:hover .video-play-btn { transform: translate(-50%, -50%) scale(1.08); }
+    .video-play-btn svg { width: 34px; height: 34px; fill: var(--black); margin-left: 4px; }
+
+    /* Video label on poster */
+    .video-poster-label {
+      position: absolute;
+      bottom: 3.5rem; left: 1.25rem; right: 1.25rem;
+      z-index: 4;
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .video-poster-label .tag {
+      background: rgba(255, 90, 0, 0.25);
+      color: var(--orange);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    /* "Translated by AI" banner — inside video, at very bottom, PT only */
+    .ai-translate-badge {
       display: none;
-      margin-top: 0.75rem;
-      padding: 0.7rem 1.2rem;
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 5;
+      padding: 0.55rem 1rem;
       background: linear-gradient(135deg, var(--orange), var(--orange-hot), #FFB800);
       color: var(--black);
-      border-radius: 8px;
       text-align: center;
       font-weight: 800;
-      font-size: 0.9rem;
-      letter-spacing: 0.04em;
+      font-size: 0.75rem;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
-      box-shadow: 0 4px 16px var(--orange-glow);
-      animation: fadeUp 0.8s ease 0.5s both;
+      border-radius: 0 0 12px 12px;
     }
-    .translate-banner:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 24px var(--orange-glow);
+    .ai-translate-badge svg {
+      width: 14px; height: 14px;
+      vertical-align: -2px;
+      margin-right: 4px;
     }
-    .translate-banner svg { width: 18px; height: 18px; vertical-align: -3px; margin-right: 6px; }
-    html[lang="pt-BR"] .translate-banner { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
-    html[lang="en"] .translate-banner { display: none; }
+    html[lang="pt-BR"] .ai-translate-badge { display: block; }
+    html[lang="en"] .ai-translate-badge { display: none; }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -1062,22 +1126,45 @@
         </div>
       </div>
 
-      <!-- VIDEO BLOCK — language-aware -->
+      <!-- VIDEO BLOCK — language-aware with poster overlay -->
       <div class="hero-video" aria-label="Video message">
+        <!-- Portuguese video -->
         <div class="video-lang" id="videoPt">
-          <video controls playsinline preload="metadata" poster="">
+          <video id="videoElPt" playsinline preload="metadata">
             <source src="" id="videoSrcPt" type="video/mp4">
           </video>
+          <div class="video-poster-overlay" id="posterPt" onclick="playVideo('pt')">
+            <img src="https://xkpagkjzsmkwuyjfdcim.supabase.co/storage/v1/object/public/videos/poster-pt.jpg" alt="Video thumbnail">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-poster-label">
+              <span data-i18n="videoLabel">Mensagem rápida do Lamin</span>
+              <span class="tag">VIDEO</span>
+            </div>
+          </div>
+          <div class="ai-translate-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7"/><path d="M2 8h4"/><path d="M5 2v5.5c0 2.5-2 4.5-4.5 4.5"/><path d="M8 12c1-1.5 2.5-3.5 2.5-5"/><path d="m14 5 3 8 3-8"/><path d="M14.5 14h5"/></svg>
+            Este video foi traduzido por IA
+          </div>
         </div>
+
+        <!-- English video -->
         <div class="video-lang" id="videoEn">
-          <video controls playsinline preload="metadata" poster="">
+          <video id="videoElEn" playsinline preload="metadata">
             <source src="" id="videoSrcEn" type="video/mp4">
           </video>
+          <div class="video-poster-overlay" id="posterEn" onclick="playVideo('en')">
+            <img src="https://xkpagkjzsmkwuyjfdcim.supabase.co/storage/v1/object/public/videos/poster-en.jpg" alt="Video thumbnail">
+            <div class="video-play-btn">
+              <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <div class="video-poster-label">
+              <span data-i18n="videoLabel">Mensagem rápida do Lamin</span>
+              <span class="tag">VIDEO</span>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="translate-banner" id="translateBanner" onclick="document.getElementById('langToggle').click();">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7"/><path d="M2 8h4"/><path d="M5 2v5.5c0 2.5-2 4.5-4.5 4.5"/><path d="M8 12c1-1.5 2.5-3.5 2.5-5"/><path d="m14 5 3 8 3-8"/><path d="M14.5 14h5"/></svg>
-        Translate with AI — Watch in English
       </div>
     </div>
   </header>
@@ -1883,6 +1970,17 @@
     var srcEn = document.getElementById('videoSrcEn');
     if (srcPt) srcPt.setAttribute('src', VIDEO_PT_URL);
     if (srcEn) srcEn.setAttribute('src', VIDEO_EN_URL);
+
+    // Play video: hide poster overlay, show controls, play
+    window.playVideo = function (l) {
+      var videoEl = document.getElementById(l === 'pt' ? 'videoElPt' : 'videoElEn');
+      var poster = document.getElementById(l === 'pt' ? 'posterPt' : 'posterEn');
+      if (poster) poster.classList.add('hidden');
+      if (videoEl) {
+        videoEl.controls = true;
+        videoEl.play();
+      }
+    };
 
     // Init on load
     setLang(lang);
