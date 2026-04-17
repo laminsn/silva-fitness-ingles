@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" data-i18n-attr="content" content="Curso gratuito de inglês para profissionais fitness da Silva Blue. 4 domingos, 1 hora por aula, materiais inclusos.">
+  <meta name="theme-color" content="#FF5A00">
+
+  <meta property="og:title" data-i18n-attr="content" content="Inglês Fitness • Turma Gratuita • Silva Blue">
+  <meta property="og:description" data-i18n-attr="content" content="4 domingos de inglês focado em fitness. 100% gratuito para a equipe Silva Blue.">
+  <meta property="og:type" content="website">
+
+  <title data-i18n="pageTitle">Inglês Fitness • Turma Gratuita • Silva Blue</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       ============================================ */
+    :root {
+      --orange: #FF5A00;
+      --orange-hot: #FF7A2E;
+      --orange-deep: #E64500;
+      --orange-glow: rgba(255, 90, 0, 0.35);
+      --black: #0A0A0A;
+      --black-2: #151515;
+      --black-3: #1F1F1F;
+      --border: #2A2A2A;
+      --white: #FFFFFF;
+      --off-white: #F4F1EB;
+      --muted: #A8A8A8;
+      --muted-2: #6B6B6B;
+      --amber: #FFB800;
+      --green: #00C26B;
+      --red: #FF4444;
+      --display: 'Anton', 'Impact', sans-serif;
+      --body: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      --max: 1200px;
+      --pad: clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--body);
+      background: var(--black);
+      color: var(--off-white);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img, video { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; color: inherit; }
+
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible {
+      outline: 2px solid var(--orange);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+
+    .display {
+      font-family: var(--display);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      line-height: 0.95;
+    }
+
+    .eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--orange);
+    }
+
+    .en {
+      color: var(--orange);
+      font-style: italic;
+      font-weight: 600;
+    }
+    html[lang="en"] .en { color: inherit; font-style: normal; font-weight: inherit; }
+
+    .highlight {
+      background: var(--orange);
+      color: var(--black);
+      padding: 0.05em 0.3em;
+      font-weight: 700;
+    }
+
+    /* ============================================
+       BUTTONS
+       ============================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 1.1rem 1.8rem;
+      font-family: var(--body);
+      font-weight: 800;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 4px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      will-change: transform;
+      white-space: nowrap;
+    }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--black);
+      box-shadow: 0 4px 0 var(--orange-deep), 0 10px 30px var(--orange-glow);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 0 var(--orange-deep), 0 14px 40px var(--orange-glow);
+      background: var(--orange-hot);
+    }
+    .btn-primary:active {
+      transform: translateY(2px);
+      box-shadow: 0 2px 0 var(--orange-deep), 0 6px 20px var(--orange-glow);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--border);
+    }
+    .btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+    .btn-lg { padding: 1.4rem 2.4rem; font-size: 1.125rem; }
+
+    /* ============================================
+       ANNOUNCEMENT BAR
+       ============================================ */
+    .announce {
+      background: var(--orange);
+      color: var(--black);
+      text-align: center;
+      padding: 0.6rem var(--pad);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      position: relative;
+      z-index: 60;
+    }
+    .announce strong { font-weight: 800; }
+    .announce .sep { margin: 0 0.75rem; opacity: 0.5; }
+
+    /* ============================================
+       NAV
+       ============================================ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(10, 10, 10, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem var(--pad);
+      max-width: var(--max);
+      margin: 0 auto;
+      gap: 1rem;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-family: var(--display);
+      font-size: 1.4rem;
+      letter-spacing: 0.06em;
+    }
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: var(--orange);
+      color: var(--black);
+      display: grid;
+      place-items: center;
+      font-family: var(--display);
+      font-size: 1.1rem;
+      border-radius: 2px;
+    }
+    .logo-text { color: var(--white); }
+    .logo-text .small {
+      display: block;
+      font-family: var(--body);
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: var(--muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: -4px;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+    .nav-cta { padding: 0.7rem 1.2rem; font-size: 0.85rem; }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 2px;
+      font-family: var(--body);
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      transition: border-color 0.15s ease;
+    }
+    .lang-toggle:hover { border-color: var(--orange); }
+    .lang-toggle span {
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      color: var(--muted);
+      transition: all 0.15s ease;
+    }
+    .lang-toggle span.active {
+      background: var(--orange);
+      color: var(--black);
+    }
+    @media (max-width: 480px) {
+      .logo-text { display: none; }
+      .nav-cta { padding: 0.6rem 0.9rem; font-size: 0.75rem; }
+      .lang-toggle { font-size: 0.7rem; }
+      .lang-toggle span { padding: 0.35rem 0.55rem; }
+    }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      position: relative;
+      padding: clamp(3rem, 8vw, 6rem) var(--pad) clamp(3rem, 6vw, 5rem);
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse 80% 60% at 80% 0%, rgba(255, 90, 0, 0.18), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 0% 100%, rgba(255, 90, 0, 0.10), transparent 60%),
+        var(--black);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black, transparent);
+      -webkit-mask-image: radial-gradient(ellipse 70% 50% at 50% 50%, black, transparent);
+      pointer-events: none;
+    }
+    .hero::after {
+      content: 'INGLÊS';
+      position: absolute;
+      bottom: -0.25em;
+      right: -0.1em;
+      font-family: var(--display);
+      font-size: clamp(10rem, 28vw, 28rem);
+      line-height: 0.8;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(255, 90, 0, 0.12);
+      pointer-events: none;
+      user-select: none;
+      letter-spacing: -0.02em;
+    }
+    html[lang="en"] .hero::after { content: 'ENGLISH'; }
+
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: clamp(2rem, 5vw, 4rem);
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 90, 0, 0.1);
+      border: 1px solid rgba(255, 90, 0, 0.3);
+      border-radius: 999px;
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--orange);
+      margin-bottom: 1.75rem;
+      animation: fadeUp 0.6s ease 0.1s both;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      background: var(--orange);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 90, 0, 0.6); }
+      50% { box-shadow: 0 0 0 8px rgba(255, 90, 0, 0); }
+    }
+
+    .hero h1 {
+      font-family: var(--display);
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(2.75rem, 7vw, 5.5rem);
+      line-height: 0.92;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.005em;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+    .hero h1 .strike-orange { color: var(--orange); display: inline-block; }
+    .hero h1 .line-2 { display: block; }
+
+    .hero-sub {
+      font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+      color: var(--muted);
+      max-width: 48ch;
+      margin-bottom: 2rem;
+      line-height: 1.5;
+      animation: fadeUp 0.7s ease 0.35s both;
+    }
+    .hero-sub strong { color: var(--white); font-weight: 700; }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.7s ease 0.5s both;
+    }
+
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      animation: fadeUp 0.7s ease 0.65s both;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .trust-item strong { color: var(--white); font-weight: 700; }
+    .trust-icon { width: 20px; height: 20px; color: var(--orange); flex-shrink: 0; }
+
+    .hero-video {
+      position: relative;
+      aspect-ratio: 9 / 16;
+      max-height: 640px;
+      background: var(--black-2);
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 90, 0, 0.1);
+      animation: fadeUp 0.8s ease 0.3s both;
+    }
+    @media (max-width: 900px) {
+      .hero-video { aspect-ratio: 16 / 10; max-height: 480px; }
+    }
+
+    .video-placeholder {
+      width: 100%; height: 100%;
+      display: grid; place-items: center;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(255, 90, 0, 0.25), transparent 60%),
+        linear-gradient(135deg, #1A1A1A, #0A0A0A);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .video-placeholder:hover { transform: scale(1.01); }
+    .video-play {
+      width: 88px; height: 88px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      box-shadow: 0 0 0 0 rgba(255, 90, 0, 0.7), 0 20px 60px rgba(0,0,0,0.5);
+      animation: pulse-btn 2.4s infinite;
+      transition: transform 0.2s ease;
+    }
+    .video-placeholder:hover .video-play { transform: scale(1.08); }
+    @keyframes pulse-btn {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(255, 90, 0, 0.5), 0 20px 60px rgba(0,0,0,0.5); }
+      50% { box-shadow: 0 0 0 20px rgba(255, 90, 0, 0), 0 20px 60px rgba(0,0,0,0.5); }
+    }
+    .video-play svg { width: 34px; height: 34px; fill: var(--black); margin-left: 4px; }
+    .video-label {
+      position: absolute;
+      bottom: 1.25rem; left: 1.25rem; right: 1.25rem;
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .video-label .tag {
+      background: rgba(255, 90, 0, 0.2);
+      color: var(--orange);
+      padding: 0.25rem 0.6rem;
+      border-radius: 3px;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 700;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================
+       STATS
+       ============================================ */
+    .stats {
+      background: var(--orange);
+      color: var(--black);
+      padding: 1.5rem var(--pad);
+      overflow: hidden;
+    }
+    .stats-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      text-align: center;
+    }
+    @media (max-width: 700px) {
+      .stats-inner { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    }
+    .stat-num { font-family: var(--display); font-size: clamp(2rem, 4vw, 3rem); line-height: 1; margin-bottom: 0.2rem; }
+    .stat-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+
+    /* ============================================
+       SECTION BASE
+       ============================================ */
+    section { padding: clamp(4rem, 8vw, 7rem) var(--pad); }
+    .section-head { max-width: 720px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .section-head h2 {
+      font-family: var(--display);
+      font-weight: 400;
+      text-transform: uppercase;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1;
+      color: var(--white);
+      margin-top: 1rem;
+    }
+    .section-head h2 .accent { color: var(--orange); }
+    .section-head p { font-size: 1.1rem; color: var(--muted); margin-top: 1.25rem; max-width: 58ch; }
+
+    /* PROBLEM */
+    .problem { background: var(--black-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .problem-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; max-width: var(--max); margin: 0 auto; }
+    .problem-card {
+      padding: 2rem;
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+    .problem-card:hover { border-color: var(--orange); transform: translateY(-4px); }
+    .problem-num { font-family: var(--display); font-size: 2.5rem; color: var(--orange); line-height: 1; margin-bottom: 0.75rem; }
+    .problem-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.65rem; color: var(--white); }
+    .problem-card p { color: var(--muted); font-size: 0.95rem; }
+
+    /* STACK */
+    .stack { background: var(--black); }
+    .stack-grid { max-width: 880px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem; }
+    .stack-item {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      gap: 1.25rem;
+      align-items: center;
+      padding: 1.25rem 1.5rem;
+      background: var(--black-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+    .stack-item:hover { border-color: var(--orange); background: var(--black-3); }
+    .stack-check {
+      width: 40px; height: 40px;
+      background: var(--orange);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+    .stack-check svg { width: 22px; height: 22px; stroke-width: 3; }
+    .stack-body h3 { font-size: 1.05rem; color: var(--white); margin-bottom: 0.2rem; font-weight: 700; }
+    .stack-body p { color: var(--muted); font-size: 0.9rem; }
+    .stack-value { font-family: var(--display); font-size: 1.1rem; color: var(--orange); white-space: nowrap; }
+    .stack-value .was { color: var(--muted-2); text-decoration: line-through; margin-right: 0.5rem; font-size: 0.9em; }
+
+    @media (max-width: 600px) {
+      .stack-item {
+        grid-template-columns: 44px 1fr;
+        grid-template-areas: "check body" "value value";
+        gap: 0.75rem;
+      }
+      .stack-check { grid-area: check; }
+      .stack-body { grid-area: body; }
+      .stack-value { grid-area: value; text-align: right; padding-top: 0.5rem; border-top: 1px dashed var(--border); }
+    }
+
+    .stack-total {
+      margin-top: 1.5rem;
+      padding: 2rem;
+      background: linear-gradient(135deg, var(--orange), var(--orange-deep));
+      color: var(--black);
+      border-radius: 8px;
+      text-align: center;
+    }
+    .stack-total .tot-label { font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    .stack-total .tot-was { font-family: var(--display); font-size: 1.75rem; text-decoration: line-through; opacity: 0.6; }
+    .stack-total .tot-now { font-family: var(--display); font-size: clamp(3rem, 7vw, 5rem); line-height: 1; margin-top: 0.25rem; }
+    .stack-total .tot-sub { font-weight: 700; margin-top: 0.5rem; font-size: 0.95rem; }
+
+    /* BENEFITS */
+    .benefits { background: var(--black-2); border-top: 1px solid var(--border); }
+    .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; max-width: var(--max); margin: 0 auto; }
+    .benefit {
+      padding: 2rem;
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease;
+    }
+    .benefit::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s ease;
+    }
+    .benefit:hover { transform: translateY(-4px); }
+    .benefit:hover::before { transform: scaleX(1); }
+    .benefit-icon {
+      width: 48px; height: 48px;
+      background: rgba(255, 90, 0, 0.1);
+      border-radius: 8px;
+      display: grid; place-items: center;
+      margin-bottom: 1.25rem;
+      color: var(--orange);
+    }
+    .benefit-icon svg { width: 24px; height: 24px; }
+    .benefit h3 { font-size: 1.2rem; color: var(--white); margin-bottom: 0.5rem; font-weight: 800; }
+    .benefit p { color: var(--muted); font-size: 0.95rem; }
+
+    /* CURRICULUM */
+    .curriculum { background: var(--black); }
+    .curriculum-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; max-width: var(--max); margin: 0 auto; }
+    .week-card {
+      padding: 1.75rem;
+      background: var(--black-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    .week-card::after {
+      content: attr(data-week);
+      position: absolute;
+      top: -20px; right: -10px;
+      font-family: var(--display);
+      font-size: 6rem;
+      color: var(--black-3);
+      line-height: 1;
+      z-index: 0;
+      pointer-events: none;
+    }
+    .week-card > * { position: relative; z-index: 1; }
+    .week-date {
+      display: inline-block;
+      padding: 0.3rem 0.7rem;
+      background: var(--orange);
+      color: var(--black);
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 3px;
+      margin-bottom: 0.8rem;
+    }
+    .week-card h3 { font-family: var(--display); font-size: 1.6rem; color: var(--white); margin-bottom: 0.5rem; line-height: 1; }
+    .week-card .en-preview { display: block; color: var(--orange); font-style: italic; font-size: 0.9rem; margin-bottom: 1rem; }
+    .week-card ul { list-style: none; }
+    .week-card li {
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .week-card li::before { content: '→'; color: var(--orange); font-weight: 700; flex-shrink: 0; }
+
+    /* STORY */
+    .story {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 90, 0, 0.12), transparent 50%),
+        var(--black);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .story-inner { max-width: 820px; margin: 0 auto; text-align: center; }
+    .story-quote { font-family: var(--display); font-size: clamp(1.75rem, 4vw, 2.75rem); line-height: 1.1; color: var(--white); margin-bottom: 2rem; }
+    .story-quote .accent { color: var(--orange); }
+    .story-body { font-size: 1.05rem; color: var(--muted); max-width: 60ch; margin: 0 auto; }
+    .story-sig { margin-top: 2.5rem; font-family: var(--display); font-size: 1.25rem; color: var(--orange); letter-spacing: 0.08em; }
+
+    /* GUARANTEE */
+    .guarantee { background: var(--black-2); border-bottom: 1px solid var(--border); }
+    .guarantee-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 2.5rem;
+      background: var(--black);
+      border: 2px solid var(--orange);
+      border-radius: 12px;
+    }
+    @media (max-width: 680px) {
+      .guarantee-inner { grid-template-columns: 1fr; text-align: center; }
+    }
+    .guarantee-seal {
+      width: 120px; height: 120px;
+      background: var(--orange);
+      color: var(--black);
+      border-radius: 50%;
+      display: grid; place-items: center;
+      text-align: center;
+      font-family: var(--display);
+      font-size: 0.8rem;
+      line-height: 1.1;
+      padding: 0.5rem;
+      margin: 0 auto;
+      box-shadow: 0 0 0 8px rgba(255, 90, 0, 0.15);
+    }
+    .guarantee-seal .big { font-size: 1.6rem; display: block; line-height: 1; margin-bottom: 0.15rem; }
+    .guarantee h3 { font-family: var(--display); font-size: clamp(1.5rem, 3vw, 2rem); color: var(--white); line-height: 1; margin-bottom: 0.75rem; }
+    .guarantee p { color: var(--muted); }
+    .guarantee p strong { color: var(--white); }
+
+    /* ============================================
+       SIGNUP + ERROR TABLE
+       ============================================ */
+    .signup { background: var(--black); }
+    .signup-inner { max-width: 640px; margin: 0 auto; }
+    .signup-head { text-align: center; margin-bottom: 2.5rem; }
+    .signup-head h2 { font-family: var(--display); font-size: clamp(2.25rem, 6vw, 3.75rem); color: var(--white); line-height: 1; margin-bottom: 1rem; }
+    .signup-head p { color: var(--muted); }
+
+    .form-card { background: var(--black-2); border: 1px solid var(--border); border-radius: 12px; padding: 2.5rem; }
+    @media (max-width: 560px) { .form-card { padding: 1.75rem 1.25rem; } }
+    .form-row { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1.25rem; }
+    .form-row label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--white); }
+    .form-row label .req { color: var(--orange); }
+    .form-row input,
+    .form-row select {
+      padding: 0.9rem 1rem;
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--white);
+      font-size: 1rem;
+      font-family: var(--body);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .form-row input:focus,
+    .form-row select:focus {
+      outline: none;
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(255, 90, 0, 0.15);
+    }
+    .form-row input::placeholder { color: var(--muted-2); }
+    .form-row input.input-error { border-color: var(--red); }
+
+    .form-check {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+    .form-check input[type="checkbox"] {
+      width: 20px; height: 20px;
+      accent-color: var(--orange);
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Error table */
+    .error-table-wrap {
+      display: none;
+      margin-bottom: 1.5rem;
+      background: var(--black);
+      border: 1px solid var(--red);
+      border-left: 4px solid var(--red);
+      border-radius: 6px;
+      overflow: hidden;
+      animation: fadeUp 0.3s ease;
+    }
+    .error-table-wrap.show { display: block; }
+    .error-table-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 68, 68, 0.1);
+      font-size: 0.8rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--red);
+    }
+    .error-table-header svg { width: 16px; height: 16px; flex-shrink: 0; }
+    .error-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .error-table th {
+      text-align: left;
+      padding: 0.6rem 1rem;
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted-2);
+      border-bottom: 1px solid var(--border);
+    }
+    .error-table td {
+      padding: 0.6rem 1rem;
+      font-size: 0.85rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .error-table tr:last-child td { border-bottom: none; }
+    .error-table .field-name {
+      color: var(--white);
+      font-weight: 700;
+      white-space: nowrap;
+      width: 100px;
+    }
+    .error-table .field-error { color: var(--red); }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1.25rem;
+      background: var(--orange);
+      color: var(--black);
+      font-family: var(--body);
+      font-weight: 800;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: 6px;
+      transition: all 0.15s ease;
+      box-shadow: 0 4px 0 var(--orange-deep);
+    }
+    .submit-btn:hover:not(:disabled) { background: var(--orange-hot); transform: translateY(-1px); box-shadow: 0 5px 0 var(--orange-deep); }
+    .submit-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--orange-deep); }
+    .submit-btn:disabled { opacity: 0.6; cursor: wait; }
+
+    .form-note { margin-top: 1rem; text-align: center; font-size: 0.8rem; color: var(--muted-2); }
+
+    .form-success { display: none; text-align: center; padding: 3rem 1rem; }
+    .form-success .check {
+      width: 80px; height: 80px;
+      margin: 0 auto 1.5rem;
+      background: var(--green);
+      color: var(--black);
+      border-radius: 50%;
+      display: grid; place-items: center;
+    }
+    .form-success .check svg { width: 44px; height: 44px; stroke-width: 3; }
+    .form-success h3 { font-family: var(--display); font-size: 2rem; color: var(--white); margin-bottom: 0.75rem; }
+    .form-success p { color: var(--muted); margin-bottom: 1.5rem; }
+    .form-success.show { display: block; }
+    .form-card.hide { display: none; }
+
+    .whatsapp-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.5rem;
+      background: #25D366;
+      color: #fff;
+      border-radius: 6px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-size: 0.9rem;
+    }
+    .whatsapp-link:hover { background: #1eb955; }
+
+    /* FAQ */
+    .faq { background: var(--black-2); border-top: 1px solid var(--border); }
+    .faq-list { max-width: 820px; margin: 0 auto; }
+    details.faq-item {
+      background: var(--black);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 0.75rem;
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+    details.faq-item[open] { border-color: var(--orange); }
+    details.faq-item summary {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--white);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    details.faq-item summary::-webkit-details-marker { display: none; }
+    details.faq-item summary::after {
+      content: '+';
+      color: var(--orange);
+      font-size: 1.75rem;
+      font-weight: 300;
+      transition: transform 0.2s ease;
+      line-height: 1;
+    }
+    details.faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer { padding: 0 1.5rem 1.5rem; color: var(--muted); font-size: 0.95rem; line-height: 1.6; }
+
+    /* FINAL CTA */
+    .final-cta {
+      background: var(--orange);
+      color: var(--black);
+      text-align: center;
+      padding: clamp(3.5rem, 7vw, 6rem) var(--pad);
+      position: relative;
+      overflow: hidden;
+    }
+    .final-cta::before {
+      content: 'ENGLISH';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: var(--display);
+      font-size: clamp(14rem, 30vw, 28rem);
+      line-height: 1;
+      color: rgba(0,0,0,0.08);
+      pointer-events: none;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .final-cta > * { position: relative; z-index: 1; }
+    .final-cta h2 { font-family: var(--display); font-size: clamp(2.25rem, 6vw, 4rem); line-height: 1; margin-bottom: 1.25rem; text-transform: uppercase; }
+    .final-cta p { font-size: 1.1rem; max-width: 48ch; margin: 0 auto 2rem; font-weight: 500; }
+    .final-cta .btn { background: var(--black); color: var(--orange); box-shadow: 0 4px 0 #000, 0 14px 40px rgba(0,0,0,0.3); }
+    .final-cta .btn:hover { background: var(--white); color: var(--black); }
+
+    /* FOOTER */
+    footer { background: var(--black); padding: 3rem var(--pad) 2rem; border-top: 1px solid var(--border); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+    }
+    .footer-about { max-width: 420px; color: var(--muted); font-size: 0.9rem; line-height: 1.6; }
+    .footer-contact { font-size: 0.9rem; color: var(--muted); }
+    .footer-contact strong { color: var(--white); display: block; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; }
+
+    .disclaimer {
+      background: var(--black-2);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--orange);
+      padding: 1.5rem;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .disclaimer strong {
+      display: block;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.75rem;
+    }
+
+    .copyright { text-align: center; color: var(--muted-2); font-size: 0.8rem; padding-top: 1rem; }
+    .copyright a { color: var(--orange); }
+
+    /* MOBILE CTA */
+    .mobile-cta { display: none; position: fixed; bottom: 0; left: 0; right: 0; padding: 0.75rem 1rem; background: var(--black); border-top: 1px solid var(--border); z-index: 40; }
+    .mobile-cta .btn { width: 100%; padding: 1rem; }
+    @media (max-width: 700px) { .mobile-cta { display: block; } body { padding-bottom: 80px; } }
+
+    /* REVEAL */
+    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announce" data-i18n="announce">
+    <strong>🎁 TURMA GRATUITA</strong>
+    <span class="sep">•</span>
+    Só para equipe <strong>Silva Blue</strong>
+    <span class="sep">•</span>
+    Começa <strong>26 de abril</strong>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#top" class="logo" aria-label="Home">
+        <span class="logo-mark">S</span>
+        <span class="logo-text" data-i18n="navLogo">
+          INGLÊS FITNESS
+          <span class="small">× SILVA BLUE</span>
+        </span>
+      </a>
+      <div class="nav-right">
+        <button class="lang-toggle" id="langToggle" aria-label="Change language">
+          <span data-lang="pt">PT</span>
+          <span data-lang="en">EN</span>
+        </button>
+        <a href="#signup" class="btn btn-primary nav-cta" data-i18n="navCta">Garantir vaga →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-eyebrow">
+          <span class="dot"></span>
+          <span data-i18n="heroEyebrow">Curso gratuito • 4 semanas • Equipe Silva Blue</span>
+        </div>
+
+        <h1 data-i18n="heroH1">
+          Seu inglês está <span class="strike-orange">custando</span> clientes.
+          <span class="line-2">Vamos resolver em <span class="strike-orange">4 domingos.</span></span>
+        </h1>
+
+        <p class="hero-sub" data-i18n="heroSub">
+          Curso intensivo <span class="en">100% focado em fitness</span> — pensado para professores, personal trainers e equipe de atendimento.
+          <strong>Atenda estrangeiros na academia, cresça online e cobre mais</strong> — sem precisar parar de treinar.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#signup" class="btn btn-primary btn-lg" data-i18n="heroCta1">Quero minha vaga grátis →</a>
+          <a href="#what-you-get" class="btn btn-ghost btn-lg" data-i18n="heroCta2">Ver o que você leva</a>
+        </div>
+
+        <div class="hero-trust">
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
+            <span data-i18n="heroTrust1"><strong>R$ 0</strong> — 100% gratuito</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span data-i18n="heroTrust2"><strong>4 domingos</strong> — 16h às 17h</span>
+          </div>
+          <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <span data-i18n="heroTrust3"><strong>WhatsApp</strong> do grupo incluso</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO BLOCK — replace with your real embed -->
+      <div class="hero-video" aria-label="Video message">
+        <div class="video-placeholder" onclick="alert(window.__lang === 'en' ? 'Replace this block with your real video embed.' : 'Substitua este bloco pelo seu embed de vídeo.');">
+          <div class="video-play">
+            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="video-label">
+            <span data-i18n="videoLabel">Mensagem rápida do Lamin</span>
+            <span class="tag">00:60</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="stats-inner">
+      <div>
+        <div class="stat-num">4</div>
+        <div class="stat-label" data-i18n="stat1">Aulas ao vivo</div>
+      </div>
+      <div>
+        <div class="stat-num">60</div>
+        <div class="stat-label" data-i18n="stat2">Min por aula</div>
+      </div>
+      <div>
+        <div class="stat-num">100%</div>
+        <div class="stat-label" data-i18n="stat3">Focado em fitness</div>
+      </div>
+      <div>
+        <div class="stat-num">R$ 0</div>
+        <div class="stat-label" data-i18n="stat4">Investimento</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROBLEM -->
+  <section class="problem reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="problemEyebrow">O problema real</span>
+        <h2 data-i18n="problemH2">Toda semana, <span class="accent">oportunidades escapam</span> porque você não fala inglês.</h2>
+        <p data-i18n="problemSub">Se você é personal ou professor na Silva Blue, provavelmente já passou por pelo menos uma dessas situações esta semana:</p>
+      </div>
+
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-num">01</div>
+          <h3 data-i18n="p1h">O aluno gringo pede ajuda — e você sorri</h3>
+          <p data-i18n="p1b">Um expat chega, tenta explicar a dor no ombro, e você responde com mímica. Ele vira e vai embora. Nunca mais volta.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">02</div>
+          <h3 data-i18n="p2h">Online coaching passa longe de você</h3>
+          <p data-i18n="p2b">Os melhores cursos, certificações e clientes pagantes estão em inglês. Você fica limitado ao mercado brasileiro — e à tabela de preço brasileira.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">03</div>
+          <h3 data-i18n="p3h">Seu Instagram só alcança quem fala português</h3>
+          <p data-i18n="p3b">Um reel em inglês pode viralizar no mundo. Em português, fica só na sua cidade. Você trabalha igual, mas a colheita é menor.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">04</div>
+          <h3 data-i18n="p4h">Você não entende a ciência que chega primeiro em inglês</h3>
+          <p data-i18n="p4b">Paper novo, metodologia nova, seminário internacional: tudo em inglês. Você aprende 6 meses depois, traduzido e resumido.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">05</div>
+          <h3 data-i18n="p5h">O cliente VIP estrangeiro escolhe outro</h3>
+          <p data-i18n="p5b">Turistas, executivos e clientes premium pagam mais — mas precisam se comunicar. Quem fala inglês leva. Quem não fala, fica vendo.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-num">06</div>
+          <h3 data-i18n="p6h">Viajar e trabalhar lá fora? Não sai do sonho</h3>
+          <p data-i18n="p6b">Você assiste vídeo de coach brasileiro em Miami, Dubai, Lisboa e pensa "um dia". Sem inglês, continua sendo só sonho.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALUE STACK -->
+  <section class="stack reveal" id="what-you-get">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="stackEyebrow">A solução completa</span>
+        <h2 data-i18n="stackH2">Tudo que você leva nessas <span class="accent">4 semanas.</span></h2>
+        <p data-i18n="stackSub">Não é curso genérico da internet. É inglês de <em>personal trainer</em>, montado para a realidade da academia, da consultoria e do seu Instagram.</p>
+      </div>
+
+      <div class="stack-grid">
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s1h">4 aulas ao vivo de 1 hora</h3>
+            <p data-i18n="s1b">Turma pequena, interação real, todas em formato de <span class="en">workshop — prática, não teoria.</span></p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 480</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s2h">Plano de aula em PDF (toda semana)</h3>
+            <p data-i18n="s2b">Com os diálogos, vocabulário, exercícios e "lição de casa" prática. <span class="en">Printable, mobile-friendly.</span></p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 200</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s3h">Vocabulário fitness: exercícios, anatomia, nutrição</h3>
+            <p data-i18n="s3b">Mais de 300 palavras e expressões que você vai usar todo dia — <span class="en">squat, deadlift, form check, progressive overload…</span></p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 150</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s4h">Roteiros prontos de atendimento</h3>
+            <p data-i18n="s4b">Recebimento, anamnese, correção de postura, feedback de treino, cobrança de pacote. <span class="en">Copy-paste scripts.</span></p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 180</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s5h">Grupo no WhatsApp</h3>
+            <p data-i18n="s5b">Tire dúvida durante a semana, pratique com os colegas, compartilhe vídeo falando inglês e receba correção.</p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 120</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s6h">Templates de bio e legenda em inglês</h3>
+            <p data-i18n="s6b">Seu Instagram, LinkedIn e site prontos para captar cliente gringo — com traduções já revisadas.</p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 90</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s7h">Certificado de conclusão</h3>
+            <p data-i18n="s7b">Entregue na última aula. Pode subir no Instagram, LinkedIn e mostrar no portfólio de cliente.</p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 50</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div class="stack-body">
+            <h3 data-i18n="s8h">Perguntas ilimitadas no grupo</h3>
+            <p data-i18n="s8b">Durante as 4 semanas — qualquer dúvida, qualquer hora. <span class="en">No question too small.</span></p>
+          </div>
+          <div class="stack-value"><span class="was">R$ 80</span><span data-i18n="sIncl">Incluso</span></div>
+        </div>
+      </div>
+
+      <div class="stack-total">
+        <div class="tot-label" data-i18n="totLabel">Valor total se fosse curso comercial</div>
+        <div class="tot-was">R$ 1.350</div>
+        <div class="tot-now">R$ 0</div>
+        <div class="tot-sub" data-i18n="totSub">Porque isso aqui é presente, não negócio.</div>
+      </div>
+
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="#signup" class="btn btn-primary btn-lg" data-i18n="stackCta">Garantir minha vaga →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="benefits reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="benefitsEyebrow">Benefícios específicos</span>
+        <h2 data-i18n="benefitsH2">O que <span class="accent">muda de verdade</span> na sua vida profissional.</h2>
+      </div>
+
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+          <h3 data-i18n="b1h">Atenda cliente estrangeiro</h3>
+          <p data-i18n="b1b">Expat, turista, executivo em férias no Rio. Você vira a referência da academia para esse público — e não divide com ninguém.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3 data-i18n="b2h">Cobre mais (em dólar)</h3>
+          <p data-i18n="b2b">Consultoria online em inglês cobra 3-10x mais. Cliente que paga em dólar não liga para crise brasileira.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 6l-9.5 9.5-5-5L1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+          <h3 data-i18n="b3h">Cresça no Instagram e YouTube</h3>
+          <p data-i18n="b3b">Um reel em inglês tem mundo inteiro como audiência. Legendas em inglês dobram o alcance sem gravar nada novo.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <h3 data-i18n="b4h">Leia a ciência em primeira mão</h3>
+          <p data-i18n="b4b">Pubmed, NSCA, revistas de hipertrofia. A informação nova chega em inglês — e você quer estar na frente, não atrás.</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3 data-i18n="b5h">Faça network internacional</h3>
+          <p data-i18n="b5b">DM em inglês para coach dos EUA, colaboração com atleta gringo, evento internacional. Tudo começa com o primeiro "hi".</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-.987 2.27-1.975 3.9-2.2a5.56 5.56 0 0 1 3.8 1.5 4 4 0 0 0 6.187-2.353 3.5 3.5 0 0 0 3.69-5.116A3.5 3.5 0 0 0 20.95 8 3.5 3.5 0 1 0 16 3.05a3.5 3.5 0 0 0-5.831 1.373 3.5 3.5 0 0 0-5.116 3.69 4 4 0 0 0-2.348 6.155C3.499 15.42 4.409 16.712 4.2 18.1 3.926 19.743 3.014 20.732 2 22"/></svg></div>
+          <h3 data-i18n="b6h">Evolua como professor</h3>
+          <p data-i18n="b6b">Mais clientes, mais público, mais referência. É diferença entre ser personal bom e ser personal <em>procurado</em>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURRICULUM -->
+  <section class="curriculum reveal" id="schedule">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="curEyebrow">O cronograma</span>
+        <h2 data-i18n="curH2">4 domingos. <span class="accent">4 habilidades.</span> 1 transformação.</h2>
+        <p data-i18n="curSub">Toda aula tem um objetivo único e prático — você sai sabendo fazer aquela coisa em inglês, na hora.</p>
+      </div>
+
+      <div class="curriculum-grid">
+        <article class="week-card" data-week="01">
+          <div class="week-date" data-i18n="w1d">Dom, 26 Abr</div>
+          <h3 data-i18n="w1t">Recebendo o cliente</h3>
+          <span class="en-preview">"Hi, welcome! First time here?"</span>
+          <ul>
+            <li data-i18n="w1l1">Apresentação: quem você é, o que faz</li>
+            <li data-i18n="w1l2">Anamnese em inglês (lesões, objetivo, histórico)</li>
+            <li data-i18n="w1l3">Vocabulário: partes do corpo + equipamentos</li>
+            <li data-i18n="w1l4">Prática em dupla: role-play real</li>
+          </ul>
+        </article>
+
+        <article class="week-card" data-week="02">
+          <div class="week-date" data-i18n="w2d">Dom, 3 Mai</div>
+          <h3 data-i18n="w2t">Conduzindo o treino</h3>
+          <span class="en-preview">"Keep your core tight. Exhale on the push."</span>
+          <ul>
+            <li data-i18n="w2l1">Instruções de execução (cues)</li>
+            <li data-i18n="w2l2">Correção de postura e forma</li>
+            <li data-i18n="w2l3">Motivação e contagem de reps</li>
+            <li data-i18n="w2l4">Vocabulário: exercícios + progressões</li>
+          </ul>
+        </article>
+
+        <article class="week-card" data-week="03">
+          <div class="week-date" data-i18n="w3d">Dom, 10 Mai</div>
+          <h3 data-i18n="w3t">Vendendo e fidelizando</h3>
+          <span class="en-preview">"I have a 12-session package that fits your goals."</span>
+          <ul>
+            <li data-i18n="w3l1">Apresentação de pacotes e preços</li>
+            <li data-i18n="w3l2">Objeções comuns (e como responder)</li>
+            <li data-i18n="w3l3">Follow-up e check-in por mensagem</li>
+            <li data-i18n="w3l4">Vocabulário: negócios + atendimento</li>
+          </ul>
+        </article>
+
+        <article class="week-card" data-week="04">
+          <div class="week-date" data-i18n="w4d">Dom, 17 Mai</div>
+          <h3 data-i18n="w4t">Presença digital em inglês</h3>
+          <span class="en-preview">"Link in bio for online coaching worldwide."</span>
+          <ul>
+            <li data-i18n="w4l1">Bio do Instagram e LinkedIn em inglês</li>
+            <li data-i18n="w4l2">Legendas e hashtags que alcançam gringos</li>
+            <li data-i18n="w4l3">Roteiro de reel/story em inglês</li>
+            <li data-i18n="w4l4">Revisão geral + certificado</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORY / GRATITUDE -->
+  <section class="story reveal">
+    <div class="story-inner">
+      <div class="story-quote" data-i18n="storyQuote">
+        "Eu sei o que é <span class="accent">não falar a língua</span> e perder oportunidade por causa disso. Esse curso é o atalho que eu queria ter tido."
+      </div>
+      <p class="story-body" data-i18n="storyBody">
+        Quando cheguei no Brasil, eu não falava português. Sei na pele o que é querer se comunicar e não conseguir. Esse curso é minha forma de devolver — ajudar vocês a quebrar a mesma barreira, só que do outro lado.
+      </p>
+      <div class="story-sig">— LAMIN</div>
+    </div>
+  </section>
+
+  <!-- GUARANTEE -->
+  <section class="guarantee reveal">
+    <div class="guarantee-inner">
+      <div class="guarantee-seal">
+        <span class="big">100%</span>
+        <span data-i18n="sealText">GRATUITO</span>
+      </div>
+      <div>
+        <h3 data-i18n="guaranteeH3">Zero risco. Zero custo. Só valor.</h3>
+        <p data-i18n="guaranteeP">
+          Não tem pegadinha, não tem upsell. Se depois de 4 aulas você achar que não aprendeu nada, pelo menos ganhou vocabulário de fitness em inglês que nenhum app ensina. <strong>Mas eu garanto que vai aprender muito mais que isso.</strong>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNUP FORM -->
+  <section class="signup reveal" id="signup">
+    <div class="signup-inner">
+      <div class="signup-head">
+        <span class="eyebrow" data-i18n="signupEyebrow">Inscrição gratuita</span>
+        <h2 data-i18n="signupH2">Garanta sua vaga agora.</h2>
+        <p data-i18n="signupSub">Preencha o formulário abaixo. Turma limitada — quando fechar, fechou.</p>
+      </div>
+
+      <div class="form-card" id="formCard">
+        <form id="registrationForm" novalidate>
+          <div class="form-row">
+            <label for="fname" data-i18n="labelName">Nome completo <span class="req">*</span></label>
+            <input type="text" id="fname" name="name" required minlength="2" data-i18n-attr="placeholder" placeholder="Seu nome completo">
+          </div>
+
+          <div class="form-row">
+            <label for="femail" data-i18n="labelEmail">Email <span class="req">*</span></label>
+            <input type="email" id="femail" name="email" required data-i18n-attr="placeholder" placeholder="seu@email.com">
+          </div>
+
+          <div class="form-row">
+            <label for="fphone" data-i18n="labelPhone">WhatsApp / Telefone <span class="req">*</span></label>
+            <input type="tel" id="fphone" name="phone" required minlength="10" data-i18n-attr="placeholder" placeholder="(21) 99999-9999">
+          </div>
+
+          <div class="form-row">
+            <label for="frole" data-i18n="labelRole">Função na academia</label>
+            <select id="frole" name="role">
+              <option value="" data-i18n="optRole0">Selecione...</option>
+              <option value="personal" data-i18n="optRole1">Personal Trainer</option>
+              <option value="professor" data-i18n="optRole2">Professor de aula em grupo</option>
+              <option value="recepcao" data-i18n="optRole3">Recepção / Atendimento</option>
+              <option value="gestor" data-i18n="optRole4">Gestor / Coordenador</option>
+              <option value="outro" data-i18n="optRole5">Outro</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="flevel" data-i18n="labelLevel">Nível de inglês</label>
+            <select id="flevel" name="english_level">
+              <option value="" data-i18n="optLevel0">Selecione...</option>
+              <option value="zero" data-i18n="optLevel1">Zero — não falo nada</option>
+              <option value="basico" data-i18n="optLevel2">Básico — entendo algumas palavras</option>
+              <option value="intermediario" data-i18n="optLevel3">Intermediário — consigo me virar</option>
+            </select>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="fterms" required>
+            <label for="fterms" data-i18n="checkTerms">Concordo em receber informações sobre o curso por WhatsApp e email. Posso cancelar a qualquer momento.</label>
+          </div>
+
+          <!-- ERROR TABLE -->
+          <div class="error-table-wrap" id="errorTable">
+            <div class="error-table-header">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span data-i18n="errorTitle">Corrija os erros abaixo</span>
+            </div>
+            <table class="error-table">
+              <thead>
+                <tr>
+                  <th data-i18n="errorColField">Campo</th>
+                  <th data-i18n="errorColError">Erro</th>
+                </tr>
+              </thead>
+              <tbody id="errorBody">
+                <!-- Errors inserted by JS -->
+              </tbody>
+            </table>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn" data-i18n="submitBtn">Confirmar minha inscrição →</button>
+
+          <p class="form-note" data-i18n="formNote">Seus dados estão seguros. Não compartilhamos com terceiros.</p>
+        </form>
+      </div>
+
+      <div class="form-success" id="formSuccess">
+        <div class="check">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 data-i18n="successH3">Inscrição confirmada!</h3>
+        <p data-i18n="successP">Você vai receber os detalhes por WhatsApp e email antes da primeira aula. Bem-vindo à turma!</p>
+        <a href="#" class="whatsapp-link" data-i18n="successWa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.29-1.245l-.308-.182-2.87.852.852-2.87-.182-.308A8 8 0 1 1 12 20z"/></svg>
+          Entrar no grupo do WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq reveal">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow" data-i18n="faqEyebrow">Dúvidas frequentes</span>
+        <h2 data-i18n="faqH2">Tudo que você precisa <span class="accent">saber.</span></h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary data-i18n="faq1q">Preciso saber inglês para participar?</summary>
+          <div class="faq-answer" data-i18n="faq1a">Não! O curso é pensado para quem está começando do zero ou tem inglês básico. A gente vai construir vocabulário e confiança juntos, passo a passo.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2q">Quanto custa?</summary>
+          <div class="faq-answer" data-i18n="faq2a">R$ 0. Zero. Grátis. Sem taxa de inscrição, sem material pago, sem surpresa no final. É um presente para a equipe Silva Blue.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3q">Onde são as aulas?</summary>
+          <div class="faq-answer" data-i18n="faq3a">Online, ao vivo, via Google Meet (ou plataforma similar). Você entra do celular ou computador, de onde estiver. O link é enviado no grupo do WhatsApp antes de cada aula.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4q">E se eu perder uma aula?</summary>
+          <div class="faq-answer" data-i18n="faq4a">Todas as aulas serão gravadas e disponibilizadas no grupo. Mas recomendo muito participar ao vivo — a interação e prática em dupla fazem toda a diferença.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5q">Preciso de algum material?</summary>
+          <div class="faq-answer" data-i18n="faq5a">Não. Todo material (PDFs, vocabulário, scripts) é entregue gratuitamente antes de cada aula. Só precisa de um celular ou computador com internet.</div>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq6q">Quem é o professor?</summary>
+          <div class="faq-answer" data-i18n="faq6a">Lamin — americano, fluente em inglês e português, com experiência em ensino e profundo conhecimento do universo fitness. Entende as duas culturas e sabe exatamente o que vocês precisam.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta reveal">
+    <h2 data-i18n="finalH2">Sua carreira em inglês começa aqui.</h2>
+    <p data-i18n="finalP">4 domingos. 1 hora por aula. 100% gratuito. A única coisa que você perde é a oportunidade — se não se inscrever.</p>
+    <a href="#signup" class="btn btn-lg" data-i18n="finalCta">Garantir minha vaga grátis →</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-about" data-i18n="footerAbout">
+          <strong style="color: var(--white);">Inglês Fitness × Silva Blue</strong><br>
+          Curso gratuito de inglês para profissionais de fitness da equipe Silva Blue. 4 domingos, 1 hora por aula, 100% online, com materiais inclusos e certificado de conclusão.
+        </div>
+        <div class="footer-contact">
+          <strong data-i18n="footerContactLabel">Contato</strong>
+          <span data-i18n="footerContact">Dúvidas? Fale no grupo do WhatsApp ou mande mensagem direta para o Lamin.</span>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <strong data-i18n="disclaimerLabel">Aviso legal</strong>
+        <span data-i18n="disclaimerText">Este curso é oferecido gratuitamente como iniciativa privada de capacitação para a equipe Silva Blue. Não há vínculo comercial, garantia de resultados financeiros, ou obrigação contratual. Os resultados dependem do empenho individual de cada participante.</span>
+      </div>
+
+      <div class="copyright">
+        <span data-i18n="copyright">© 2026 Inglês Fitness × Silva Blue. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MOBILE STICKY CTA -->
+  <div class="mobile-cta">
+    <a href="#signup" class="btn btn-primary" data-i18n="mobileCta">Garantir vaga grátis →</a>
+  </div>
+
+  <!-- ============================================
+       SUPABASE CDN
+       ============================================ -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ==========================================
+       SUPABASE CONFIG
+       ========================================== */
+    const SUPABASE_URL = 'https://xkpagkjzsmkwuyjfdcim.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhrcGFna2p6c21rd3V5amZkY2ltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0NDg4NzAsImV4cCI6MjA5MjAyNDg3MH0.lUv0LXwqUiM9yWXLe5X-CHNj9IeaVPvcSoSkyi8K2Ys';
+    const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+    /* ==========================================
+       i18n — TRANSLATION DICTIONARY
+       ========================================== */
+    const T = {
+      pt: {
+        pageTitle: 'Inglês Fitness • Turma Gratuita • Silva Blue',
+        announce: '<strong>🎁 TURMA GRATUITA</strong><span class="sep">•</span>Só para equipe <strong>Silva Blue</strong><span class="sep">•</span>Começa <strong>26 de abril</strong>',
+        navLogo: 'INGLÊS FITNESS<span class="small">× SILVA BLUE</span>',
+        navCta: 'Garantir vaga →',
+        heroEyebrow: 'Curso gratuito • 4 semanas • Equipe Silva Blue',
+        heroH1: 'Seu inglês está <span class="strike-orange">custando</span> clientes.<span class="line-2">Vamos resolver em <span class="strike-orange">4 domingos.</span></span>',
+        heroSub: 'Curso intensivo <span class="en">100% focado em fitness</span> — pensado para professores, personal trainers e equipe de atendimento. <strong>Atenda estrangeiros na academia, cresça online e cobre mais</strong> — sem precisar parar de treinar.',
+        heroCta1: 'Quero minha vaga grátis →',
+        heroCta2: 'Ver o que você leva',
+        heroTrust1: '<strong>R$ 0</strong> — 100% gratuito',
+        heroTrust2: '<strong>4 domingos</strong> — 16h às 17h',
+        heroTrust3: '<strong>WhatsApp</strong> do grupo incluso',
+        videoLabel: 'Mensagem rápida do Lamin',
+        stat1: 'Aulas ao vivo', stat2: 'Min por aula', stat3: 'Focado em fitness', stat4: 'Investimento',
+        problemEyebrow: 'O problema real',
+        problemH2: 'Toda semana, <span class="accent">oportunidades escapam</span> porque você não fala inglês.',
+        problemSub: 'Se você é personal ou professor na Silva Blue, provavelmente já passou por pelo menos uma dessas situações esta semana:',
+        p1h: 'O aluno gringo pede ajuda — e você sorri',
+        p1b: 'Um expat chega, tenta explicar a dor no ombro, e você responde com mímica. Ele vira e vai embora. Nunca mais volta.',
+        p2h: 'Online coaching passa longe de você',
+        p2b: 'Os melhores cursos, certificações e clientes pagantes estão em inglês. Você fica limitado ao mercado brasileiro — e à tabela de preço brasileira.',
+        p3h: 'Seu Instagram só alcança quem fala português',
+        p3b: 'Um reel em inglês pode viralizar no mundo. Em português, fica só na sua cidade. Você trabalha igual, mas a colheita é menor.',
+        p4h: 'Você não entende a ciência que chega primeiro em inglês',
+        p4b: 'Paper novo, metodologia nova, seminário internacional: tudo em inglês. Você aprende 6 meses depois, traduzido e resumido.',
+        p5h: 'O cliente VIP estrangeiro escolhe outro',
+        p5b: 'Turistas, executivos e clientes premium pagam mais — mas precisam se comunicar. Quem fala inglês leva. Quem não fala, fica vendo.',
+        p6h: 'Viajar e trabalhar lá fora? Não sai do sonho',
+        p6b: 'Você assiste vídeo de coach brasileiro em Miami, Dubai, Lisboa e pensa "um dia". Sem inglês, continua sendo só sonho.',
+        stackEyebrow: 'A solução completa',
+        stackH2: 'Tudo que você leva nessas <span class="accent">4 semanas.</span>',
+        stackSub: 'Não é curso genérico da internet. É inglês de <em>personal trainer</em>, montado para a realidade da academia, da consultoria e do seu Instagram.',
+        s1h: '4 aulas ao vivo de 1 hora', s1b: 'Turma pequena, interação real, todas em formato de <span class="en">workshop — prática, não teoria.</span>',
+        s2h: 'Plano de aula em PDF (toda semana)', s2b: 'Com os diálogos, vocabulário, exercícios e "lição de casa" prática. <span class="en">Printable, mobile-friendly.</span>',
+        s3h: 'Vocabulário fitness: exercícios, anatomia, nutrição', s3b: 'Mais de 300 palavras e expressões que você vai usar todo dia — <span class="en">squat, deadlift, form check, progressive overload…</span>',
+        s4h: 'Roteiros prontos de atendimento', s4b: 'Recebimento, anamnese, correção de postura, feedback de treino, cobrança de pacote. <span class="en">Copy-paste scripts.</span>',
+        s5h: 'Grupo no WhatsApp', s5b: 'Tire dúvida durante a semana, pratique com os colegas, compartilhe vídeo falando inglês e receba correção.',
+        s6h: 'Templates de bio e legenda em inglês', s6b: 'Seu Instagram, LinkedIn e site prontos para captar cliente gringo — com traduções já revisadas.',
+        s7h: 'Certificado de conclusão', s7b: 'Entregue na última aula. Pode subir no Instagram, LinkedIn e mostrar no portfólio de cliente.',
+        s8h: 'Perguntas ilimitadas no grupo', s8b: 'Durante as 4 semanas — qualquer dúvida, qualquer hora. <span class="en">No question too small.</span>',
+        sIncl: 'Incluso',
+        totLabel: 'Valor total se fosse curso comercial', totSub: 'Porque isso aqui é presente, não negócio.',
+        stackCta: 'Garantir minha vaga →',
+        benefitsEyebrow: 'Benefícios específicos',
+        benefitsH2: 'O que <span class="accent">muda de verdade</span> na sua vida profissional.',
+        b1h: 'Atenda cliente estrangeiro', b1b: 'Expat, turista, executivo em férias no Rio. Você vira a referência da academia para esse público — e não divide com ninguém.',
+        b2h: 'Cobre mais (em dólar)', b2b: 'Consultoria online em inglês cobra 3-10x mais. Cliente que paga em dólar não liga para crise brasileira.',
+        b3h: 'Cresça no Instagram e YouTube', b3b: 'Um reel em inglês tem mundo inteiro como audiência. Legendas em inglês dobram o alcance sem gravar nada novo.',
+        b4h: 'Leia a ciência em primeira mão', b4b: 'Pubmed, NSCA, revistas de hipertrofia. A informação nova chega em inglês — e você quer estar na frente, não atrás.',
+        b5h: 'Faça network internacional', b5b: 'DM em inglês para coach dos EUA, colaboração com atleta gringo, evento internacional. Tudo começa com o primeiro "hi".',
+        b6h: 'Evolua como professor', b6b: 'Mais clientes, mais público, mais referência. É diferença entre ser personal bom e ser personal <em>procurado</em>.',
+        curEyebrow: 'O cronograma',
+        curH2: '4 domingos. <span class="accent">4 habilidades.</span> 1 transformação.',
+        curSub: 'Toda aula tem um objetivo único e prático — você sai sabendo fazer aquela coisa em inglês, na hora.',
+        w1d: 'Dom, 26 Abr', w1t: 'Recebendo o cliente',
+        w1l1: 'Apresentação: quem você é, o que faz', w1l2: 'Anamnese em inglês (lesões, objetivo, histórico)', w1l3: 'Vocabulário: partes do corpo + equipamentos', w1l4: 'Prática em dupla: role-play real',
+        w2d: 'Dom, 3 Mai', w2t: 'Conduzindo o treino',
+        w2l1: 'Instruções de execução (cues)', w2l2: 'Correção de postura e forma', w2l3: 'Motivação e contagem de reps', w2l4: 'Vocabulário: exercícios + progressões',
+        w3d: 'Dom, 10 Mai', w3t: 'Vendendo e fidelizando',
+        w3l1: 'Apresentação de pacotes e preços', w3l2: 'Objeções comuns (e como responder)', w3l3: 'Follow-up e check-in por mensagem', w3l4: 'Vocabulário: negócios + atendimento',
+        w4d: 'Dom, 17 Mai', w4t: 'Presença digital em inglês',
+        w4l1: 'Bio do Instagram e LinkedIn em inglês', w4l2: 'Legendas e hashtags que alcançam gringos', w4l3: 'Roteiro de reel/story em inglês', w4l4: 'Revisão geral + certificado',
+        storyQuote: '"Eu sei o que é <span class="accent">não falar a língua</span> e perder oportunidade por causa disso. Esse curso é o atalho que eu queria ter tido."',
+        storyBody: 'Quando cheguei no Brasil, eu não falava português. Sei na pele o que é querer se comunicar e não conseguir. Esse curso é minha forma de devolver — ajudar vocês a quebrar a mesma barreira, só que do outro lado.',
+        sealText: 'GRATUITO',
+        guaranteeH3: 'Zero risco. Zero custo. Só valor.',
+        guaranteeP: 'Não tem pegadinha, não tem upsell. Se depois de 4 aulas você achar que não aprendeu nada, pelo menos ganhou vocabulário de fitness em inglês que nenhum app ensina. <strong>Mas eu garanto que vai aprender muito mais que isso.</strong>',
+        signupEyebrow: 'Inscrição gratuita',
+        signupH2: 'Garanta sua vaga agora.',
+        signupSub: 'Preencha o formulário abaixo. Turma limitada — quando fechar, fechou.',
+        labelName: 'Nome completo <span class="req">*</span>',
+        labelEmail: 'Email <span class="req">*</span>',
+        labelPhone: 'WhatsApp / Telefone <span class="req">*</span>',
+        labelRole: 'Função na academia',
+        labelLevel: 'Nível de inglês',
+        optRole0: 'Selecione...', optRole1: 'Personal Trainer', optRole2: 'Professor de aula em grupo', optRole3: 'Recepção / Atendimento', optRole4: 'Gestor / Coordenador', optRole5: 'Outro',
+        optLevel0: 'Selecione...', optLevel1: 'Zero — não falo nada', optLevel2: 'Básico — entendo algumas palavras', optLevel3: 'Intermediário — consigo me virar',
+        checkTerms: 'Concordo em receber informações sobre o curso por WhatsApp e email. Posso cancelar a qualquer momento.',
+        errorTitle: 'Corrija os erros abaixo',
+        errorColField: 'Campo', errorColError: 'Erro',
+        submitBtn: 'Confirmar minha inscrição →',
+        formNote: 'Seus dados estão seguros. Não compartilhamos com terceiros.',
+        successH3: 'Inscrição confirmada!',
+        successP: 'Você vai receber os detalhes por WhatsApp e email antes da primeira aula. Bem-vindo à turma!',
+        successWa: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.29-1.245l-.308-.182-2.87.852.852-2.87-.182-.308A8 8 0 1 1 12 20z"/></svg> Entrar no grupo do WhatsApp',
+        faqEyebrow: 'Dúvidas frequentes',
+        faqH2: 'Tudo que você precisa <span class="accent">saber.</span>',
+        faq1q: 'Preciso saber inglês para participar?', faq1a: 'Não! O curso é pensado para quem está começando do zero ou tem inglês básico. A gente vai construir vocabulário e confiança juntos, passo a passo.',
+        faq2q: 'Quanto custa?', faq2a: 'R$ 0. Zero. Grátis. Sem taxa de inscrição, sem material pago, sem surpresa no final. É um presente para a equipe Silva Blue.',
+        faq3q: 'Onde são as aulas?', faq3a: 'Online, ao vivo, via Google Meet (ou plataforma similar). Você entra do celular ou computador, de onde estiver. O link é enviado no grupo do WhatsApp antes de cada aula.',
+        faq4q: 'E se eu perder uma aula?', faq4a: 'Todas as aulas serão gravadas e disponibilizadas no grupo. Mas recomendo muito participar ao vivo — a interação e prática em dupla fazem toda a diferença.',
+        faq5q: 'Preciso de algum material?', faq5a: 'Não. Todo material (PDFs, vocabulário, scripts) é entregue gratuitamente antes de cada aula. Só precisa de um celular ou computador com internet.',
+        faq6q: 'Quem é o professor?', faq6a: 'Lamin — americano, fluente em inglês e português, com experiência em ensino e profundo conhecimento do universo fitness. Entende as duas culturas e sabe exatamente o que vocês precisam.',
+        finalH2: 'Sua carreira em inglês começa aqui.',
+        finalP: '4 domingos. 1 hora por aula. 100% gratuito. A única coisa que você perde é a oportunidade — se não se inscrever.',
+        finalCta: 'Garantir minha vaga grátis →',
+        footerAbout: '<strong style="color: var(--white);">Inglês Fitness × Silva Blue</strong><br>Curso gratuito de inglês para profissionais de fitness da equipe Silva Blue. 4 domingos, 1 hora por aula, 100% online, com materiais inclusos e certificado de conclusão.',
+        footerContactLabel: 'Contato',
+        footerContact: 'Dúvidas? Fale no grupo do WhatsApp ou mande mensagem direta para o Lamin.',
+        disclaimerLabel: 'Aviso legal',
+        disclaimerText: 'Este curso é oferecido gratuitamente como iniciativa privada de capacitação para a equipe Silva Blue. Não há vínculo comercial, garantia de resultados financeiros, ou obrigação contratual. Os resultados dependem do empenho individual de cada participante.',
+        copyright: '© 2026 Inglês Fitness × Silva Blue. Todos os direitos reservados.',
+        mobileCta: 'Garantir vaga grátis →',
+        // Placeholders (for data-i18n-attr)
+        _placeholderName: 'Seu nome completo',
+        _placeholderEmail: 'seu@email.com',
+        _placeholderPhone: '(21) 99999-9999',
+        // Meta
+        _metaDesc: 'Curso gratuito de inglês para profissionais fitness da Silva Blue. 4 domingos, 1 hora por aula, materiais inclusos.',
+        _ogTitle: 'Inglês Fitness • Turma Gratuita • Silva Blue',
+        _ogDesc: '4 domingos de inglês focado em fitness. 100% gratuito para a equipe Silva Blue.',
+        // Errors
+        errNameReq: 'Nome é obrigatório',
+        errNameMin: 'Nome deve ter pelo menos 2 caracteres',
+        errEmailReq: 'Email é obrigatório',
+        errEmailFmt: 'Formato de email inválido',
+        errEmailDup: 'Este email já está inscrito',
+        errPhoneReq: 'Telefone é obrigatório',
+        errPhoneMin: 'Telefone deve ter pelo menos 10 dígitos',
+        errTerms: 'Você precisa aceitar os termos',
+        errServer: 'Erro no servidor. Tente novamente.',
+        fieldName: 'Nome', fieldEmail: 'Email', fieldPhone: 'Telefone', fieldTerms: 'Termos',
+      },
+      en: {
+        pageTitle: 'Fitness English • Free Course • Silva Blue',
+        announce: '<strong>🎁 FREE CLASS</strong><span class="sep">•</span>Exclusive to <strong>Silva Blue</strong> team<span class="sep">•</span>Starts <strong>April 26</strong>',
+        navLogo: 'FITNESS ENGLISH<span class="small">× SILVA BLUE</span>',
+        navCta: 'Claim your spot →',
+        heroEyebrow: 'Free course • 4 weeks • Silva Blue team',
+        heroH1: 'Your English is <span class="strike-orange">costing</span> you clients.<span class="line-2">Let\'s fix it in <span class="strike-orange">4 Sundays.</span></span>',
+        heroSub: 'Intensive course <span class="en">100% focused on fitness</span> — designed for trainers, coaches, and front desk staff. <strong>Serve foreign clients, grow online, and charge more</strong> — without missing a workout.',
+        heroCta1: 'Claim my free spot →',
+        heroCta2: 'See what you get',
+        heroTrust1: '<strong>R$ 0</strong> — 100% free',
+        heroTrust2: '<strong>4 Sundays</strong> — 4pm to 5pm',
+        heroTrust3: '<strong>WhatsApp</strong> group included',
+        videoLabel: 'Quick message from Lamin',
+        stat1: 'Live classes', stat2: 'Min per class', stat3: 'Fitness-focused', stat4: 'Investment',
+        problemEyebrow: 'The real problem',
+        problemH2: 'Every week, <span class="accent">opportunities slip away</span> because you don\'t speak English.',
+        problemSub: 'If you\'re a trainer or coach at Silva Blue, you\'ve probably experienced at least one of these this week:',
+        p1h: 'The foreign client asks for help — and you just smile',
+        p1b: 'An expat walks in, tries to explain their shoulder pain, and you respond with hand gestures. They turn around and leave. Never come back.',
+        p2h: 'Online coaching is out of reach',
+        p2b: 'The best courses, certifications, and paying clients are in English. You\'re stuck in the Brazilian market — and Brazilian pricing.',
+        p3h: 'Your Instagram only reaches Portuguese speakers',
+        p3b: 'An English reel can go viral worldwide. In Portuguese, it stays in your city. Same work, smaller harvest.',
+        p4h: 'You can\'t read the science that drops in English first',
+        p4b: 'New papers, new methods, international seminars: all in English. You learn 6 months later, translated and summarized.',
+        p5h: 'The VIP foreign client picks someone else',
+        p5b: 'Tourists, executives, and premium clients pay more — but need to communicate. Whoever speaks English wins. Whoever doesn\'t, watches.',
+        p6h: 'Work abroad? Still just a dream',
+        p6b: 'You watch Brazilian coaches in Miami, Dubai, Lisbon and think "someday." Without English, it stays a dream.',
+        stackEyebrow: 'The complete solution',
+        stackH2: 'Everything you get in these <span class="accent">4 weeks.</span>',
+        stackSub: 'This isn\'t a generic internet course. It\'s English for <em>personal trainers</em>, built for the reality of the gym, coaching, and your Instagram.',
+        s1h: '4 live classes, 1 hour each', s1b: 'Small group, real interaction, all in workshop format — practice, not theory.',
+        s2h: 'Lesson plan PDF (every week)', s2b: 'With dialogues, vocabulary, exercises, and practical homework. Printable, mobile-friendly.',
+        s3h: 'Fitness vocabulary: exercises, anatomy, nutrition', s3b: '300+ words and phrases you\'ll use every day — squat, deadlift, form check, progressive overload…',
+        s4h: 'Ready-made client scripts', s4b: 'Greeting, assessment, posture correction, workout feedback, package pricing. Copy-paste scripts.',
+        s5h: 'WhatsApp group', s5b: 'Ask questions during the week, practice with colleagues, share videos speaking English and get corrections.',
+        s6h: 'English bio and caption templates', s6b: 'Your Instagram, LinkedIn, and website ready to attract international clients — with reviewed translations.',
+        s7h: 'Completion certificate', s7b: 'Delivered on the last class. Post it on Instagram, LinkedIn, and add it to your client portfolio.',
+        s8h: 'Unlimited Q&A in the group', s8b: 'For all 4 weeks — any question, any time. No question too small.',
+        sIncl: 'Included',
+        totLabel: 'Total value if this were a paid course', totSub: 'Because this is a gift, not a business.',
+        stackCta: 'Claim my spot →',
+        benefitsEyebrow: 'Specific benefits',
+        benefitsH2: 'What <span class="accent">actually changes</span> in your professional life.',
+        b1h: 'Serve foreign clients', b1b: 'Expats, tourists, executives on vacation in Rio. You become the go-to trainer for this audience — no competition.',
+        b2h: 'Charge more (in dollars)', b2b: 'Online coaching in English charges 3-10x more. Clients paying in dollars don\'t care about the Brazilian economy.',
+        b3h: 'Grow on Instagram and YouTube', b3b: 'An English reel has the whole world as an audience. English captions double your reach without recording anything new.',
+        b4h: 'Read the science firsthand', b4b: 'Pubmed, NSCA, hypertrophy journals. New information arrives in English — and you want to be ahead, not behind.',
+        b5h: 'Build an international network', b5b: 'DM a US coach in English, collab with a foreign athlete, attend an international event. It all starts with "hi."',
+        b6h: 'Level up as a trainer', b6b: 'More clients, bigger audience, stronger reputation. It\'s the difference between being a good trainer and a <em>sought-after</em> one.',
+        curEyebrow: 'The schedule',
+        curH2: '4 Sundays. <span class="accent">4 skills.</span> 1 transformation.',
+        curSub: 'Every class has one practical objective — you leave knowing how to do that thing in English, right away.',
+        w1d: 'Sun, Apr 26', w1t: 'Welcoming the client',
+        w1l1: 'Introduction: who you are, what you do', w1l2: 'Client assessment in English (injuries, goals, history)', w1l3: 'Vocabulary: body parts + equipment', w1l4: 'Pair practice: real role-play',
+        w2d: 'Sun, May 3', w2t: 'Leading the workout',
+        w2l1: 'Execution cues and instructions', w2l2: 'Posture and form correction', w2l3: 'Motivation and rep counting', w2l4: 'Vocabulary: exercises + progressions',
+        w3d: 'Sun, May 10', w3t: 'Selling and retaining',
+        w3l1: 'Presenting packages and pricing', w3l2: 'Common objections (and how to handle them)', w3l3: 'Follow-up and check-in messages', w3l4: 'Vocabulary: business + client service',
+        w4d: 'Sun, May 17', w4t: 'Digital presence in English',
+        w4l1: 'Instagram and LinkedIn bio in English', w4l2: 'Captions and hashtags that reach foreigners', w4l3: 'Reel/story script in English', w4l4: 'Final review + certificate',
+        storyQuote: '"I know what it\'s like to <span class="accent">not speak the language</span> and lose opportunities because of it. This course is the shortcut I wish I\'d had."',
+        storyBody: 'When I arrived in Brazil, I didn\'t speak Portuguese. I know firsthand what it\'s like to want to communicate and not be able to. This course is my way of giving back — helping you break the same barrier, just from the other side.',
+        sealText: 'FREE',
+        guaranteeH3: 'Zero risk. Zero cost. All value.',
+        guaranteeP: 'No catch, no upsell. If after 4 classes you feel you learned nothing, at least you gained fitness vocabulary in English that no app teaches. <strong>But I guarantee you\'ll learn much more than that.</strong>',
+        signupEyebrow: 'Free registration',
+        signupH2: 'Claim your spot now.',
+        signupSub: 'Fill in the form below. Limited spots — when it\'s full, it\'s full.',
+        labelName: 'Full name <span class="req">*</span>',
+        labelEmail: 'Email <span class="req">*</span>',
+        labelPhone: 'WhatsApp / Phone <span class="req">*</span>',
+        labelRole: 'Role at the gym',
+        labelLevel: 'English level',
+        optRole0: 'Select...', optRole1: 'Personal Trainer', optRole2: 'Group class instructor', optRole3: 'Front desk / Reception', optRole4: 'Manager / Coordinator', optRole5: 'Other',
+        optLevel0: 'Select...', optLevel1: 'Zero — I don\'t speak any', optLevel2: 'Basic — I understand some words', optLevel3: 'Intermediate — I can get by',
+        checkTerms: 'I agree to receive course information via WhatsApp and email. I can unsubscribe at any time.',
+        errorTitle: 'Please fix the errors below',
+        errorColField: 'Field', errorColError: 'Error',
+        submitBtn: 'Confirm my registration →',
+        formNote: 'Your data is safe. We don\'t share it with third parties.',
+        successH3: 'Registration confirmed!',
+        successP: 'You\'ll receive the details via WhatsApp and email before the first class. Welcome to the team!',
+        successWa: '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18a8 8 0 0 1-4.29-1.245l-.308-.182-2.87.852.852-2.87-.182-.308A8 8 0 1 1 12 20z"/></svg> Join the WhatsApp group',
+        faqEyebrow: 'Frequently asked questions',
+        faqH2: 'Everything you need to <span class="accent">know.</span>',
+        faq1q: 'Do I need to know English to join?', faq1a: 'No! The course is designed for absolute beginners and basic-level speakers. We\'ll build vocabulary and confidence together, step by step.',
+        faq2q: 'How much does it cost?', faq2a: 'R$ 0. Zero. Free. No sign-up fee, no paid materials, no surprise at the end. It\'s a gift for the Silva Blue team.',
+        faq3q: 'Where are the classes?', faq3a: 'Online, live, via Google Meet (or similar platform). Join from your phone or computer, wherever you are. The link is sent in the WhatsApp group before each class.',
+        faq4q: 'What if I miss a class?', faq4a: 'All classes will be recorded and shared in the group. But I highly recommend attending live — the interaction and pair practice make all the difference.',
+        faq5q: 'Do I need any materials?', faq5a: 'No. All materials (PDFs, vocabulary, scripts) are delivered free before each class. You just need a phone or computer with internet.',
+        faq6q: 'Who\'s the teacher?', faq6a: 'Lamin — American, fluent in English and Portuguese, with teaching experience and deep knowledge of the fitness world. He understands both cultures and knows exactly what you need.',
+        finalH2: 'Your career in English starts here.',
+        finalP: '4 Sundays. 1 hour per class. 100% free. The only thing you lose is the opportunity — if you don\'t sign up.',
+        finalCta: 'Claim my free spot →',
+        footerAbout: '<strong style="color: var(--white);">Fitness English × Silva Blue</strong><br>Free English course for fitness professionals on the Silva Blue team. 4 Sundays, 1 hour per class, 100% online, with materials included and a completion certificate.',
+        footerContactLabel: 'Contact',
+        footerContact: 'Questions? Reach out in the WhatsApp group or send Lamin a direct message.',
+        disclaimerLabel: 'Legal notice',
+        disclaimerText: 'This course is offered free as a private training initiative for the Silva Blue team. There is no commercial relationship, guarantee of financial results, or contractual obligation. Results depend on each participant\'s individual effort.',
+        copyright: '© 2026 Fitness English × Silva Blue. All rights reserved.',
+        mobileCta: 'Claim free spot →',
+        _placeholderName: 'Your full name',
+        _placeholderEmail: 'you@email.com',
+        _placeholderPhone: '+55 21 99999-9999',
+        _metaDesc: 'Free English course for Silva Blue fitness professionals. 4 Sundays, 1 hour per class, materials included.',
+        _ogTitle: 'Fitness English • Free Course • Silva Blue',
+        _ogDesc: '4 Sundays of fitness-focused English. 100% free for the Silva Blue team.',
+        errNameReq: 'Name is required',
+        errNameMin: 'Name must be at least 2 characters',
+        errEmailReq: 'Email is required',
+        errEmailFmt: 'Invalid email format',
+        errEmailDup: 'This email is already registered',
+        errPhoneReq: 'Phone is required',
+        errPhoneMin: 'Phone must have at least 10 digits',
+        errTerms: 'You must accept the terms',
+        errServer: 'Server error. Please try again.',
+        fieldName: 'Name', fieldEmail: 'Email', fieldPhone: 'Phone', fieldTerms: 'Terms',
+      }
+    };
+
+    /* ==========================================
+       LANGUAGE ENGINE
+       ========================================== */
+    let lang = localStorage.getItem('sfi-lang') || 'pt';
+    window.__lang = lang;
+
+    function setLang(l) {
+      lang = l;
+      window.__lang = l;
+      localStorage.setItem('sfi-lang', l);
+      document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
+
+      // Toggle active pill
+      document.querySelectorAll('.lang-toggle span').forEach(function (s) {
+        s.classList.toggle('active', s.dataset.lang === l);
+      });
+
+      // Swap text
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        var key = el.getAttribute('data-i18n');
+        if (T[l][key] !== undefined) el.innerHTML = T[l][key];
+      });
+
+      // Swap attributes (placeholder, content)
+      document.querySelectorAll('[data-i18n-attr]').forEach(function (el) {
+        var attr = el.getAttribute('data-i18n-attr');
+        var key = el.getAttribute('data-i18n') || null;
+        // For meta tags, use mapping
+        if (el.tagName === 'META') {
+          var prop = el.getAttribute('property') || el.getAttribute('name');
+          if (prop === 'description') el.setAttribute(attr, T[l]._metaDesc);
+          if (prop === 'og:title') el.setAttribute(attr, T[l]._ogTitle);
+          if (prop === 'og:description') el.setAttribute(attr, T[l]._ogDesc);
+        }
+        if (attr === 'placeholder') {
+          var id = el.id;
+          if (id === 'fname') el.setAttribute('placeholder', T[l]._placeholderName);
+          if (id === 'femail') el.setAttribute('placeholder', T[l]._placeholderEmail);
+          if (id === 'fphone') el.setAttribute('placeholder', T[l]._placeholderPhone);
+        }
+      });
+
+      // Update title
+      document.title = T[l].pageTitle;
+    }
+
+    // Init on load
+    setLang(lang);
+
+    // Toggle button
+    document.getElementById('langToggle').addEventListener('click', function () {
+      setLang(lang === 'pt' ? 'en' : 'pt');
+    });
+
+    /* ==========================================
+       FORM VALIDATION + SUPABASE SUBMIT
+       ========================================== */
+    var form = document.getElementById('registrationForm');
+    var errorWrap = document.getElementById('errorTable');
+    var errorBody = document.getElementById('errorBody');
+    var submitBtn = document.getElementById('submitBtn');
+    var formCard = document.getElementById('formCard');
+    var formSuccess = document.getElementById('formSuccess');
+
+    function t(key) { return T[lang][key] || key; }
+
+    function validateForm() {
+      var errors = [];
+      var name = document.getElementById('fname').value.trim();
+      var email = document.getElementById('femail').value.trim();
+      var phone = document.getElementById('fphone').value.trim();
+      var terms = document.getElementById('fterms').checked;
+
+      // Reset input styles
+      ['fname', 'femail', 'fphone'].forEach(function (id) {
+        document.getElementById(id).classList.remove('input-error');
+      });
+
+      // Name
+      if (!name) {
+        errors.push({ field: t('fieldName'), msg: t('errNameReq'), input: 'fname' });
+      } else if (name.length < 2) {
+        errors.push({ field: t('fieldName'), msg: t('errNameMin'), input: 'fname' });
+      }
+
+      // Email
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!email) {
+        errors.push({ field: t('fieldEmail'), msg: t('errEmailReq'), input: 'femail' });
+      } else if (!emailRe.test(email)) {
+        errors.push({ field: t('fieldEmail'), msg: t('errEmailFmt'), input: 'femail' });
+      }
+
+      // Phone — strip non-digits
+      var phoneDigits = phone.replace(/\D/g, '');
+      if (!phone) {
+        errors.push({ field: t('fieldPhone'), msg: t('errPhoneReq'), input: 'fphone' });
+      } else if (phoneDigits.length < 10) {
+        errors.push({ field: t('fieldPhone'), msg: t('errPhoneMin'), input: 'fphone' });
+      }
+
+      // Terms
+      if (!terms) {
+        errors.push({ field: t('fieldTerms'), msg: t('errTerms'), input: null });
+      }
+
+      return errors;
+    }
+
+    function showErrors(errors) {
+      errorBody.innerHTML = '';
+      if (errors.length === 0) {
+        errorWrap.classList.remove('show');
+        return;
+      }
+      errors.forEach(function (e) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td class="field-name">' + e.field + '</td><td class="field-error">' + e.msg + '</td>';
+        errorBody.appendChild(tr);
+        if (e.input) document.getElementById(e.input).classList.add('input-error');
+      });
+      errorWrap.classList.add('show');
+      errorWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      // Validate
+      var errors = validateForm();
+      if (errors.length > 0) {
+        showErrors(errors);
+        return;
+      }
+
+      // Clear errors
+      showErrors([]);
+      submitBtn.disabled = true;
+      submitBtn.textContent = lang === 'pt' ? 'Enviando...' : 'Submitting...';
+
+      // Collect data
+      var data = {
+        name: document.getElementById('fname').value.trim(),
+        email: document.getElementById('femail').value.trim(),
+        phone: document.getElementById('fphone').value.trim(),
+        role: document.getElementById('frole').value || null,
+        english_level: document.getElementById('flevel').value || null,
+        language: lang,
+      };
+
+      try {
+        var result = await sb.from('registrations').insert([data]);
+        if (result.error) {
+          // Duplicate email
+          if (result.error.code === '23505') {
+            showErrors([{ field: t('fieldEmail'), msg: t('errEmailDup'), input: 'femail' }]);
+          } else {
+            showErrors([{ field: '—', msg: t('errServer') + ' (' + result.error.message + ')', input: null }]);
+          }
+          submitBtn.disabled = false;
+          submitBtn.textContent = t('submitBtn');
+          return;
+        }
+
+        // Success
+        formCard.classList.add('hide');
+        formSuccess.classList.add('show');
+        formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } catch (err) {
+        showErrors([{ field: '—', msg: t('errServer'), input: null }]);
+        submitBtn.disabled = false;
+        submitBtn.textContent = t('submitBtn');
+      }
+    });
+
+    /* ==========================================
+       SCROLL REVEAL
+       ========================================== */
+    var reveals = document.querySelectorAll('.reveal');
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { observer.observe(el); });
+
+  })();
+  </script>
+
+</body>
+</html>
