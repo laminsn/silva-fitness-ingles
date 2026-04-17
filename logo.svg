@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#F5D060"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a3a7a"/>
+      <stop offset="100%" stop-color="#0f2557"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background: rounded square -->
+  <rect x="16" y="16" width="480" height="480" rx="96" fill="url(#blue)"/>
+
+  <!-- Gold geometric accent: diagonal slash -->
+  <path d="M340 16 L480 16 Q496 16 496 32 L496 160 Z" fill="url(#gold)" opacity="0.9"/>
+  <path d="M16 352 L16 480 Q16 496 32 496 L172 496 Z" fill="url(#gold)" opacity="0.9"/>
+
+  <!-- Inner geometric frame -->
+  <rect x="56" y="56" width="400" height="400" rx="24" fill="none" stroke="url(#gold)" stroke-width="2.5" opacity="0.4"/>
+
+  <!-- RFC Letters — geometric, modern, stacked vertically with overlap -->
+  <!-- R -->
+  <g transform="translate(100, 120)">
+    <path d="M0 0 L0 160 L24 160 L24 96 L48 96 L80 160 L108 160 L72 92 C96 84 108 64 108 44 C108 16 88 0 56 0 Z M24 24 L52 24 C76 24 84 36 84 48 C84 60 76 72 52 72 L24 72 Z" fill="white"/>
+  </g>
+
+  <!-- F -->
+  <g transform="translate(200, 120)">
+    <path d="M0 0 L0 160 L24 160 L24 96 L80 96 L80 72 L24 72 L24 24 L88 24 L88 0 Z" fill="white"/>
+  </g>
+
+  <!-- C -->
+  <g transform="translate(290, 120)">
+    <path d="M80 0 L28 0 C12 0 0 12 0 28 L0 132 C0 148 12 160 28 160 L80 160 L80 136 L28 136 C26 136 24 134 24 132 L24 28 C24 26 26 24 28 24 L80 24 Z" fill="white"/>
+  </g>
+
+  <!-- Tagline bar -->
+  <rect x="100" y="300" width="312" height="2" fill="url(#gold)" opacity="0.7"/>
+
+  <!-- "RIO FIT CLUB" text -->
+  <text x="256" y="340" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="28" letter-spacing="12" fill="url(#gold)">RIO FIT CLUB</text>
+
+  <!-- Subtle geometric dots -->
+  <circle cx="100" cy="380" r="4" fill="url(#gold)" opacity="0.5"/>
+  <circle cx="256" cy="380" r="4" fill="url(#gold)" opacity="0.5"/>
+  <circle cx="412" cy="380" r="4" fill="url(#gold)" opacity="0.5"/>
+</svg>
