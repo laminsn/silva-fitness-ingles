@@ -945,6 +945,42 @@
     .mobile-cta .btn { width: 100%; padding: 1rem; }
     @media (max-width: 700px) { .mobile-cta { display: block; } body { padding-bottom: 80px; } }
 
+    /* VIDEO PLAYER */
+    .hero-video video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .hero-video .video-lang { display: none; }
+    .hero-video .video-lang.active { display: block; width: 100%; height: 100%; }
+
+    /* TRANSLATE BANNER (PT only) */
+    .translate-banner {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.7rem 1.2rem;
+      background: linear-gradient(135deg, var(--orange), var(--orange-hot), #FFB800);
+      color: var(--black);
+      border-radius: 8px;
+      text-align: center;
+      font-weight: 800;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      box-shadow: 0 4px 16px var(--orange-glow);
+      animation: fadeUp 0.8s ease 0.5s both;
+    }
+    .translate-banner:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px var(--orange-glow);
+    }
+    .translate-banner svg { width: 18px; height: 18px; vertical-align: -3px; margin-right: 6px; }
+    html[lang="pt-BR"] .translate-banner { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    html[lang="en"] .translate-banner { display: none; }
+
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -1026,17 +1062,22 @@
         </div>
       </div>
 
-      <!-- VIDEO BLOCK — replace with your real embed -->
+      <!-- VIDEO BLOCK — language-aware -->
       <div class="hero-video" aria-label="Video message">
-        <div class="video-placeholder" onclick="alert(window.__lang === 'en' ? 'Replace this block with your real video embed.' : 'Substitua este bloco pelo seu embed de vídeo.');">
-          <div class="video-play">
-            <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          </div>
-          <div class="video-label">
-            <span data-i18n="videoLabel">Mensagem rápida do Lamin</span>
-            <span class="tag">00:60</span>
-          </div>
+        <div class="video-lang" id="videoPt">
+          <video controls playsinline preload="metadata" poster="">
+            <source src="" id="videoSrcPt" type="video/mp4">
+          </video>
         </div>
+        <div class="video-lang" id="videoEn">
+          <video controls playsinline preload="metadata" poster="">
+            <source src="" id="videoSrcEn" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="translate-banner" id="translateBanner" onclick="document.getElementById('langToggle').click();">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 5h7"/><path d="M2 8h4"/><path d="M5 2v5.5c0 2.5-2 4.5-4.5 4.5"/><path d="M8 12c1-1.5 2.5-3.5 2.5-5"/><path d="m14 5 3 8 3-8"/><path d="M14.5 14h5"/></svg>
+        Translate with AI — Watch in English
       </div>
     </div>
   </header>
@@ -1825,7 +1866,23 @@
 
       // Update title
       document.title = T[l].pageTitle;
+
+      // Swap video based on language
+      var videoPt = document.getElementById('videoPt');
+      var videoEn = document.getElementById('videoEn');
+      if (videoPt && videoEn) {
+        videoPt.classList.toggle('active', l === 'pt');
+        videoEn.classList.toggle('active', l === 'en');
+      }
     }
+
+    // Set video sources (loaded once, swapped via CSS)
+    var VIDEO_PT_URL = 'https://xkpagkjzsmkwuyjfdcim.supabase.co/storage/v1/object/public/videos/video-pt.mp4';
+    var VIDEO_EN_URL = 'https://xkpagkjzsmkwuyjfdcim.supabase.co/storage/v1/object/public/videos/video-en.mp4';
+    var srcPt = document.getElementById('videoSrcPt');
+    var srcEn = document.getElementById('videoSrcEn');
+    if (srcPt) srcPt.setAttribute('src', VIDEO_PT_URL);
+    if (srcEn) srcEn.setAttribute('src', VIDEO_EN_URL);
 
     // Init on load
     setLang(lang);
