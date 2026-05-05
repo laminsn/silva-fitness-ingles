@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rio Fit Club · Electric Fitness, Language & Community in Rio</title>
+<meta name="description" content="Rio Fit Club is Rio's electric fitness and language community: immersive training, social gatherings, combat sports, wellness, and multilingual access to the city."/>
+<meta name="theme-color" content="#07100a"/>
+<meta property="og:title" content="Rio Fit Club · Electric Fitness, Language & Community in Rio"/>
+<meta property="og:description" content="Train hard, learn fast, and belong in Rio. Electric fitness, language immersion, social gatherings, and wellness community in Brazil."/>
+<meta property="og:type" content="website"/>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="alternate icon" type="image/png" sizes="32x32" href="/riofitclub-favicon-32.png"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/riofitclub-apple-touch-icon.png"/>
+<link rel="icon" type="image/png" sizes="192x192" href="/riofitclub-icon-192.png"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#313030",
+                      "on-surface-variant": "#b9cbbc",
+                      "on-tertiary": "#2f3131",
+                      "surface": "#0c150f",
+                      "on-secondary-container": "#bab8b7",
+                      "inverse-surface": "#dbe5db",
+                      "surface-container-high": "#232c25",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "outline": "#849588",
+                      "outline-variant": "#3b4a3f",
+                      "on-surface": "#dbe5db",
+                      "surface-tint": "#00e38f",
+                      "on-primary-fixed-variant": "#005230",
+                      "error-container": "#93000a",
+                      "inverse-primary": "#006d42",
+                      "surface-dim": "#0c150f",
+                      "secondary-container": "#4a4949",
+                      "on-primary-fixed": "#002111",
+                      "surface-container-low": "#141e17",
+                      "primary-fixed-dim": "#00e38f",
+                      "secondary-fixed": "#e5e2e1",
+                      "error": "#ffb4ab",
+                      "primary": "#f6fff5",
+                      "tertiary": "#fdfdfd",
+                      "primary-container": "#1fffa3",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-container": "#007245",
+                      "surface-container-highest": "#2d3730",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "surface-variant": "#2d3730",
+                      "surface-container-lowest": "#07100a",
+                      "inverse-on-surface": "#29332c",
+                      "on-primary": "#003920",
+                      "background": "#0c150f",
+                      "secondary": "#c9c6c5",
+                      "surface-container": "#18221b",
+                      "tertiary-fixed": "#e2e2e2",
+                      "on-background": "#dbe5db",
+                      "on-tertiary-container": "#626363",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "primary-fixed": "#53ffab",
+                      "surface-bright": "#323b34",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "tertiary-container": "#e0e0e0",
+                      "on-secondary-fixed-variant": "#474646"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "margin-mobile": "16px",
+                      "unit": "8px",
+                      "margin-desktop": "40px",
+                      "stack-sm": "8px",
+                      "stack-md": "16px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Lexend"],
+                      "headline-lg": ["Lexend"],
+                      "body-md": ["Lexend"],
+                      "headline-xl": ["Lexend"],
+                      "label-bold": ["Lexend"],
+                      "label-sm": ["Lexend"],
+                      "headline-md": ["Lexend"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "label-bold": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+  :root{
+    --ease-out:cubic-bezier(.23,1,.32,1);
+    --ease-in-out:cubic-bezier(.77,0,.175,1);
+  }
+  html{scroll-behavior:smooth}
+  .sr-only{
+    position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+    clip:rect(0,0,0,0);white-space:nowrap;border:0;
+  }
+  a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{
+    outline:2px solid #1fffa3;
+    outline-offset:4px;
+  }
+  .nav-link{
+    position:relative;
+    transition:color 180ms var(--ease-out),transform 150ms var(--ease-out);
+  }
+  .nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:-8px;
+    height:2px;
+    background:#1fffa3;
+    transform:scaleX(0);
+    transform-origin:left;
+    transition:transform 220ms var(--ease-out);
+  }
+  .nav-link:hover::after,.nav-link:focus-visible::after{transform:scaleX(1)}
+  .icon-button{
+    display:grid;
+    place-items:center;
+    width:36px;
+    height:36px;
+    border-radius:999px;
+    transition:background 180ms var(--ease-out),transform 150ms var(--ease-out),color 180ms var(--ease-out);
+  }
+  .icon-button:hover{background:rgba(31,255,163,.12);transform:translateY(-1px)}
+  .icon-button:active{transform:scale(.96)}
+  .language-select{
+    min-height:36px;
+    border:1px solid rgba(31,255,163,.35);
+    border-radius:999px;
+    background:rgba(7,16,10,.72);
+    color:#1fffa3;
+    padding:0 32px 0 12px;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    transition:border-color 180ms var(--ease-out),box-shadow 180ms var(--ease-out),transform 150ms var(--ease-out);
+  }
+  .language-select:hover{
+    border-color:#1fffa3;
+    box-shadow:0 0 18px rgba(31,255,163,.14);
+    transform:translateY(-1px);
+  }
+  .magnetic-btn{
+    position:relative;
+    overflow:hidden;
+    isolation:isolate;
+    transition:transform 150ms var(--ease-out), box-shadow 180ms var(--ease-out), border-color 180ms var(--ease-out), background 180ms var(--ease-out);
+  }
+  .magnetic-btn::before{
+    content:"";
+    position:absolute;
+    inset:-40%;
+    background:linear-gradient(120deg,transparent 35%,rgba(255,255,255,.42),transparent 65%);
+    transform:translateX(-120%) rotate(12deg);
+    transition:transform 650ms var(--ease-out);
+    z-index:-1;
+  }
+  .magnetic-btn:hover::before{transform:translateX(120%) rotate(12deg)}
+  .magnetic-btn:hover{transform:translateY(-2px)}
+  .magnetic-btn:active{transform:scale(.97)}
+  .hero-kicker,.hero-title,.hero-copy,.hero-actions{animation:rise 760ms var(--ease-out) both}
+  .hero-title{animation-delay:90ms}
+  .hero-copy{animation-delay:180ms}
+  .hero-actions{animation-delay:270ms}
+  @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  .headline-punch{
+    text-shadow:0 0 28px rgba(31,255,163,.18),0 8px 42px rgba(0,0,0,.55);
+  }
+  .hero-video{
+    filter:saturate(1.1) contrast(1.08);
+    transform:scale(1.02);
+  }
+  .hero-vignette{
+    background:
+      radial-gradient(circle at 50% 45%,transparent 0%,rgba(12,21,15,.18) 38%,rgba(12,21,15,.85) 100%),
+      linear-gradient(90deg,rgba(12,21,15,.92),rgba(12,21,15,.35),rgba(12,21,15,.88));
+  }
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity 620ms var(--ease-out),transform 620ms var(--ease-out)}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+  .discipline-track{
+    animation:discipline-marquee 42s linear infinite;
+    width:max-content;
+  }
+  .discipline-track:hover{animation-play-state:paused}
+  @keyframes discipline-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .discipline-card{transition:transform 260ms var(--ease-out),border-color 260ms var(--ease-out),box-shadow 260ms var(--ease-out)}
+  .discipline-card:hover{transform:translateY(-8px);border-color:#1fffa3;box-shadow:0 18px 45px rgba(0,0,0,.35),0 0 24px rgba(31,255,163,.16)}
+  .field-wrap{
+    position:relative;
+  }
+  .field-wrap label{
+    display:block;
+    margin-bottom:8px;
+    color:#b9cbbc;
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+  }
+  .form-input{
+    width:100%;
+    min-height:56px;
+    transition:border-color 180ms var(--ease-out),box-shadow 180ms var(--ease-out),background 180ms var(--ease-out);
+  }
+  .form-input:focus{
+    border-color:#1fffa3;
+    box-shadow:0 0 0 3px rgba(31,255,163,.16);
+    background:#070b08;
+  }
+  .submit-ready:disabled{
+    opacity:.65;
+    cursor:not-allowed;
+    transform:none;
+  }
+  .exit-modal{
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 220ms var(--ease-out);
+  }
+  .exit-modal.open{
+    opacity:1;
+    pointer-events:auto;
+  }
+  .exit-panel{
+    transform:translateY(18px) scale(.97);
+    opacity:0;
+    transition:transform 260ms var(--ease-out),opacity 260ms var(--ease-out);
+  }
+  .exit-modal.open .exit-panel{
+    transform:translateY(0) scale(1);
+    opacity:1;
+  }
+  @media (max-width:640px){
+    header nav{padding-left:16px!important;padding-right:16px!important}
+    header .text-2xl{font-size:1.25rem}
+    .hero-title{font-size:clamp(3rem,16vw,4.6rem)!important}
+    .hero-actions a{width:100%}
+    .discipline-track{animation-duration:60s}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    .discipline-track{transform:none!important}
+  }
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-zinc-800 shadow-[0_0_20px_rgba(31,255,163,0.1)]">
+<nav class="flex justify-between items-center px-8 py-4 w-full">
+<a href="#" class="text-2xl font-black text-primary-container italic tracking-tighter" aria-label="Rio Fit Club home">RIO FIT CLUB</a>
+<div class="hidden md:flex items-center gap-8 font-lexend font-bold uppercase tracking-widest text-zinc-400">
+<a class="nav-link text-primary-container active:scale-95 transform" href="#courses">Courses</a>
+<a class="nav-link hover:text-primary-container active:scale-95 transform" href="#events">Events</a>
+<a class="nav-link hover:text-primary-container active:scale-95 transform" href="#gatherings">Gatherings</a>
+<a class="nav-link hover:text-primary-container active:scale-95 transform" href="#disciplines">Disciplines</a>
+<a class="nav-link hover:text-primary-container active:scale-95 transform" href="#community">Community</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 items-center">
+<label class="sr-only" for="languageSelect">Language</label>
+<select id="languageSelect" class="language-select" aria-label="Language">
+<option value="en">EN</option>
+<option value="pt">PT</option>
+<option value="fr">FR</option>
+<option value="zh">中文</option>
+<option value="es">ES</option>
+</select>
+<a class="icon-button material-symbols-outlined text-primary-container hover:text-white cursor-pointer" href="/course" aria-label="Student course login">person</a>
+</div>
+<a href="#signup" class="magnetic-btn bg-primary-container text-on-primary-container font-label-bold uppercase tracking-widest px-6 py-2 rounded-full hover:shadow-[0_0_15px_rgba(31,255,163,0.5)]">JOIN THE CLUB</a>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<video class="hero-video w-full h-full object-cover opacity-70" autoplay muted loop playsinline poster="https://images.pexels.com/videos/19909893/aerial-architecture-bay-beach-19909893.jpeg?auto=compress&cs=tinysrgb&w=1600">
+<source src="https://videos.pexels.com/video-files/19909893/19909893-uhd_2560_1440_30fps.mp4" type="video/mp4"/>
+</video>
+<div class="absolute inset-0 hero-vignette"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-6xl px-gutter">
+<div class="hero-kicker inline-flex items-center gap-3 rounded-full border border-primary-container/40 bg-black/45 px-5 py-2 text-primary-container font-label-bold uppercase tracking-[0.28em] mb-6 backdrop-blur-md">
+<span class="h-2 w-2 rounded-full bg-primary-container shadow-[0_0_14px_rgba(31,255,163,.9)]"></span>
+                    Language. Fitness. Rio access.
+</div>
+<h1 class="hero-title headline-punch font-headline-xl text-primary uppercase mb-stack-md leading-[0.88] tracking-tighter text-[clamp(3.2rem,8vw,7.8rem)]">
+                    Stop visiting Rio.<br/>Start <span class="text-primary-container italic">belonging</span> here.
+                </h1>
+<p class="hero-copy font-body-lg text-secondary mb-stack-lg max-w-3xl mx-auto text-[clamp(1.05rem,2vw,1.45rem)]">
+                    Rio Fit Club turns workouts, language, and real community into your unfair advantage in the most alive city on earth. Learn faster, train harder, meet better people, and move through Rio like you actually have a place here.
+                </p>
+<div class="hero-actions flex flex-col sm:flex-row gap-stack-md justify-center">
+<a href="#signup" class="magnetic-btn bg-primary-container text-on-primary-container font-headline-md px-10 py-4 rounded-lg hover:shadow-[0_0_28px_rgba(31,255,163,0.7)] uppercase">JOIN THE CLUB</a>
+<a href="#courses" class="magnetic-btn border-2 border-primary-container text-primary-container font-headline-md px-10 py-4 rounded-lg hover:bg-primary-container/10 uppercase">SEE THE PATH</a>
+</div>
+</div>
+</section>
+<!-- The Rio Vibe -->
+<section class="py-stack-lg bg-surface-container-lowest reveal">
+<div class="max-w-7xl mx-auto px-gutter grid grid-cols-1 md:grid-cols-2 gap-stack-lg items-center">
+<div class="relative group">
+<div class="absolute -inset-2 bg-primary-container/20 blur-xl group-hover:bg-primary-container/30 transition-all"></div>
+<img class="relative rounded-xl border border-zinc-800 object-cover aspect-[4/3] w-full" data-alt="A high-intensity photo of a multicultural group of fit men and women laughing and high-fiving during a beach volleyball session on Ipanema Beach. The lighting is bright and golden with dramatic long shadows from the setting sun. The aesthetic is premium sports lifestyle, featuring athletic gear with subtle electric green accents that pop against the deep blue ocean and golden sand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDVayT319NAkS2jqqgJ8L9MgVuIe4-rWE-55rysL8rTL_R7KDM_qXMzR0sM02FJYjbNi4Z3Vxgk3JIdJHbkag_MggnLsc2T00Bk__ReIlvQ163Km2-_HNC_9r-luW3WuV11CPgk8Tj0-lN670THhc7DNn0OlqVedI2jYCyQiMnDz6ZvyTUGf1fLnRSsmMN_Z1GGAbzFj0BK2ztLwt-bgoy_m7Y9X43x6zS8C6FGoornAb8E6N5Cw0FHopjjkTVyrnv3UHOa0K2bhE"/>
+</div>
+<div class="space-y-stack-md">
+<h2 class="font-headline-lg text-primary-container uppercase italic tracking-normal">THE RIO VIBE</h2>
+<h3 class="font-headline-md text-primary">WHERE EXPATS &amp; LOCALS COLLIDE</h3>
+<p class="font-body-lg text-on-surface-variant">
+                        Forget traditional classrooms. Rio Fit Club is a kinetic ecosystem where language learning happens in motion. We bridge the gap between global explorers and Rio’s elite athletes, creating a high-octane community built on sweat, slang, and shared victory.
+                    </p>
+<div class="grid grid-cols-2 gap-stack-md">
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<span class="text-primary-container font-headline-md block">500+</span>
+<span class="font-label-sm uppercase text-secondary">Active Members</span>
+</div>
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<span class="text-primary-container font-headline-md block">15+</span>
+<span class="font-label-sm uppercase text-secondary">Sports Disciplines</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Gatherings -->
+<section id="gatherings" class="py-stack-lg bg-surface-container-low reveal">
+<div class="max-w-7xl mx-auto px-gutter grid grid-cols-1 lg:grid-cols-[1.1fr_.9fr] gap-stack-lg items-center">
+<div class="relative overflow-hidden rounded-xl border border-outline-variant min-h-[420px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Diverse Rio Fit Club members laughing together at a rooftop social gathering in Rio at sunset" src="assets/stitch-rio-fit-extra/social-gathering.png"/>
+<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent"></div>
+<div class="absolute inset-x-0 bottom-0 p-8">
+<span class="bg-primary-container text-on-primary-container font-label-bold px-3 py-1 rounded-full uppercase mb-4 inline-block">After the workout</span>
+<h2 class="font-headline-lg text-primary uppercase max-w-xl">SOCIAL GATHERINGS WITH A RIO PULSE</h2>
+</div>
+</div>
+<div class="space-y-stack-md">
+<h3 class="font-headline-md text-primary-container uppercase italic tracking-normal">HEALTH. WELLNESS. FUN. ENERGY.</h3>
+<p class="font-body-lg text-on-surface-variant">
+                    Our gatherings are a mix of health, wellness, fun, and energy. This is where the training turns into friendships, the language practice becomes natural, and the city starts to feel like home.
+                </p>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-3 block" data-icon="local_fire_department">local_fire_department</span>
+<h4 class="font-label-bold text-primary uppercase mb-2">Energy</h4>
+<p class="font-label-sm text-secondary leading-relaxed">Rooftop nights, beach hangs, and post-session momentum.</p>
+</div>
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-3 block" data-icon="self_improvement">self_improvement</span>
+<h4 class="font-label-bold text-primary uppercase mb-2">Wellness</h4>
+<p class="font-label-sm text-secondary leading-relaxed">Recovery, breath, mobility, and community rhythm.</p>
+</div>
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<span class="material-symbols-outlined text-primary-container text-3xl mb-3 block" data-icon="groups">groups</span>
+<h4 class="font-label-bold text-primary uppercase mb-2">Connection</h4>
+<p class="font-label-sm text-secondary leading-relaxed">Locals, expats, athletes, and friends in motion.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Pillars (Bento Grid Style) -->
+<section id="courses" class="py-stack-lg bg-background reveal">
+<div class="max-w-7xl mx-auto px-gutter">
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-primary uppercase text-center">CORE <span class="text-primary-container italic">PILLARS</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
+<!-- Language Courses -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-high p-8 flex flex-col justify-end min-h-[400px]">
+<img class="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:scale-105 transition-transform duration-500" data-alt="An overhead artistic shot of a sleek modern workspace overlooking the Rio coastline at night. A tablet displays a language learning app with vibrant green interface elements, placed next to a high-end yoga mat and dumbbells. The scene is illuminated by neon green accent lights reflecting off glass surfaces, creating a sophisticated and futuristic educational atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQc60DxBOJv9qCZ134DpHjN0edWSAacIPjsHPsIKWMKuZka-RU7ZTQKuJIxqCGpYrglntZc4cNPyG8iph61pTXBx5XChVYW0ub8C7hdzayry0yC-UWYxKw7u0L-FmFz2RrpgS-kyeyvS65SI43Tc_v_ykoBKX8PoqXZYpIkDhB7KjmV8Jjld4xnXwT27Y04IeIBCNu1jhoqeU5qUBAEwRQYFnOoxwQlAribckbbCC6QCy53JM0Gwp5TLJ-5ELzNOWA6xP7dxHdbA0"/>
+<div class="relative z-10">
+<span class="bg-primary-container text-on-primary-container font-label-bold px-3 py-1 rounded-full uppercase mb-4 inline-block">Fluency in Motion</span>
+<h3 class="font-headline-xl text-primary mb-2">LANGUAGE COURSES</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg">
+                                Specialized Portuguese for expats and English for fitness professionals. Master the vocabulary of performance while living the lifestyle.
+                            </p>
+</div>
+<div class="absolute top-8 right-8">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="translate">translate</span>
+</div>
+</div>
+<!-- Fitness Events -->
+<div id="events" class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-high p-8 flex flex-col justify-end scroll-mt-28">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500" data-alt="A macro shot of a powerlifter's chalk-covered hands gripping a barbell, with electric green glow effects highlighting the muscle definition and the intense concentration. The background is a dark, industrial Rio gym with dramatic lighting. The image conveys raw power, discipline, and the high-octane aesthetic of elite fitness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJDZsI2yASv5qsOKZIHcjGqqfeSC2mEMrzyiByPlCDlpQPNz5TTcQFSSuQFml_InwXcdh_nEmXL-cDOllpTOgaeyN2AKBL3TsZMiq4e4n1qgkOyisWvZzk20JoKS_nyBksd3Bxr37RG-zTBFGhGui_3XBGia8vReUKVjLJkpb-rcDttF7XxZnZbZ8MR8TAXbdF-lVaGmimmxm_zyW27ybiHKxTZsPdF_73bjje5oEl7ODbluF2syjqVN7XJw-OmHnNRdA_A4lkc6s"/>
+<div class="relative z-10">
+<h3 class="font-headline-md text-primary mb-2 uppercase">FITNESS EVENTS</h3>
+<p class="font-body-md text-on-surface-variant">
+                                From sunrise cycling on the coast to elite powerlifting meets. We don't just train; we compete together.
+                            </p>
+</div>
+<div class="absolute top-8 right-8">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="fitness_center">fitness_center</span>
+</div>
+</div>
+<!-- Signature Platform -->
+<div class="group relative overflow-hidden rounded-xl border border-outline-variant bg-surface-container-high p-8 flex flex-col justify-end">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:scale-105 transition-transform duration-500" data-alt="A futuristic digital interface visualization showing a community network map over a 3D wireframe of Rio de Janeiro. The nodes of the network glow with intense emerald green light, representing interconnected athletes and learners. The style is ultra-modern, glassmorphic, and high-tech, evoking the feeling of an exclusive digital membership club." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexM4wC0wosIAKpkpPjhqzuxT7hn2Q0nfBi6hcq91TLlQufEPLJssH7HZZetlmbpbmUX0G2WQVkrRVz-49uJiWq2qA32CxEjW8PzRTJTaKG1hWj-CJQ0fZz3aHAX6gj5pFZqnyXxHEcFYNOcM0MQ0S_TklcfGjaKL7F_c_F3ZS_XoYuT-l-ohXPR33eEtULHV8hQbKOC_S9hvvIZvgs5sABKIDt0LC5xOZmQYnNeuLLOVCflPrHfq0q8ntSmJ1ceflHygdu_Rhc_Y"/>
+<div class="relative z-10">
+<h3 class="font-headline-md text-primary mb-2 uppercase">SIGNATURE HUB</h3>
+<p class="font-body-md text-on-surface-variant">
+                                Our exclusive digital sanctuary for tailored courses and global community connection. Your portal to Rio.
+                            </p>
+</div>
+<div class="absolute top-8 right-8">
+<span class="material-symbols-outlined text-primary-container text-4xl" data-icon="hub">hub</span>
+</div>
+</div>
+<!-- Empty/Filler for Bento -->
+<div class="md:col-span-2 bg-gradient-to-br from-primary-container/20 to-transparent p-8 rounded-xl border border-primary-container/20 flex items-center justify-between">
+<div>
+<h4 class="font-headline-md text-primary mb-2">READY TO LEVEL UP?</h4>
+<p class="font-body-md text-on-surface-variant">Get access to all events and digital materials.</p>
+</div>
+<a href="#signup" class="magnetic-btn bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-label-bold uppercase">Get Started</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Sports Grid -->
+<section id="disciplines" class="py-stack-lg overflow-hidden reveal">
+<div class="max-w-7xl mx-auto px-gutter mb-stack-md">
+<h2 class="font-headline-lg text-primary uppercase">ELECTRIC <span class="text-primary-container">DISCIPLINES</span></h2>
+<p class="font-body-lg text-on-surface-variant mt-3 max-w-2xl">Brazil is not one face, one body type, or one story. The club should feel like the city: mixed, loud, athletic, sunlit, and alive.</p>
+</div>
+<div class="overflow-hidden">
+<div class="discipline-track flex gap-stack-md px-gutter pb-8 snap-x">
+<!-- Tennis -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Black tennis player serving on a Rio clay court" src="assets/stitch-rio-fit/tennis.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Tennis</h4>
+</div>
+</div>
+</div>
+<!-- Volleyball -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Diverse beach volleyball players competing on the sand in Rio" src="assets/stitch-rio-fit/basketball.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Volleyball</h4>
+</div>
+</div>
+</div>
+<!-- Basketball -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Diverse basketball players competing on an outdoor Rio court" src="assets/stitch-rio-fit/volleyball.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Basketball</h4>
+</div>
+</div>
+</div>
+<!-- Powerlifting -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Dark-complexion woman powerlifter performing a heavy squat" src="assets/stitch-rio-fit/powerlifting.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Powerlifting</h4>
+</div>
+</div>
+</div>
+<!-- Run Club -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Diverse run club training along the Rio coastline" src="assets/stitch-rio-fit/run-club.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Run Club</h4>
+</div>
+</div>
+</div>
+<!-- Cycling -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Diverse cyclists riding through Rio at sunrise" src="assets/stitch-rio-fit/cycling.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Cycling</h4>
+</div>
+</div>
+</div>
+<!-- Surf -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Diverse surfers walking along a Rio beach at dusk" src="assets/stitch-rio-fit/surf.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Surf</h4>
+</div>
+</div>
+</div>
+<!-- Jiu-Jitsu -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Black man and brown woman practicing Brazilian jiu-jitsu in Rio" src="assets/stitch-rio-fit-extra/jiu-jitsu.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Jiu-Jitsu</h4>
+</div>
+</div>
+</div>
+<!-- Kickboxing -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Dark-complexion woman training kickboxing on a heavy bag" src="assets/stitch-rio-fit-extra/kickboxing.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Kickboxing</h4>
+</div>
+</div>
+</div>
+<!-- Boxing -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Mixed-race man boxing with gloves in a Rio gym" src="assets/stitch-rio-fit-extra/boxing.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Boxing</h4>
+</div>
+</div>
+</div>
+<!-- Yoga -->
+<div class="discipline-card flex-none w-72 snap-center group">
+<div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Large diverse yoga group practicing on a rooftop overlooking Rio" src="assets/stitch-rio-fit-extra/yoga.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<h4 class="text-primary font-headline-md uppercase">Yoga</h4>
+</div>
+</div>
+</div>
+<!-- Repeat for seamless marquee -->
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Black tennis player serving on a Rio clay court" src="assets/stitch-rio-fit/tennis.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Tennis</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Diverse beach volleyball players competing on the sand in Rio" src="assets/stitch-rio-fit/basketball.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Volleyball</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Diverse basketball players competing on an outdoor Rio court" src="assets/stitch-rio-fit/volleyball.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Basketball</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Dark-complexion woman powerlifter performing a heavy squat" src="assets/stitch-rio-fit/powerlifting.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Powerlifting</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Diverse run club training along the Rio coastline" src="assets/stitch-rio-fit/run-club.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Run Club</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Diverse cyclists riding through Rio at sunrise" src="assets/stitch-rio-fit/cycling.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Cycling</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Diverse surfers walking along a Rio beach at dusk" src="assets/stitch-rio-fit/surf.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Surf</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Black man and brown woman practicing Brazilian jiu-jitsu in Rio" src="assets/stitch-rio-fit-extra/jiu-jitsu.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Jiu-Jitsu</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Dark-complexion woman training kickboxing on a heavy bag" src="assets/stitch-rio-fit-extra/kickboxing.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Kickboxing</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Mixed-race man boxing with gloves in a Rio gym" src="assets/stitch-rio-fit-extra/boxing.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Boxing</h4></div></div></div>
+<div class="discipline-card flex-none w-72 snap-center group"><div class="relative h-96 rounded-xl overflow-hidden mb-4 border border-zinc-800"><img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Large diverse yoga group practicing on a rooftop overlooking Rio" src="assets/stitch-rio-fit-extra/yoga.png"/><div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div><div class="absolute bottom-6 left-6"><h4 class="text-primary font-headline-md uppercase">Yoga</h4></div></div></div>
+</div>
+</div>
+</section>
+<!-- Community Impact -->
+<section id="community" class="py-stack-lg bg-surface-container-low reveal">
+<div class="max-w-7xl mx-auto px-gutter flex flex-col md:flex-row gap-stack-lg items-center">
+<div class="md:w-1/2 order-2 md:order-1">
+<h2 class="font-headline-lg text-primary uppercase mb-stack-md">LOCAL SOUL, <br/><span class="text-primary-container italic">GLOBAL REACH</span></h2>
+<p class="font-body-lg text-on-surface-variant mb-stack-md">
+                        Rio Fit Club isn't just a gym; it's a social catalyst. By integrating language immersion into the city's pulse, we create organic networking opportunities that lead to lifelong friendships and professional breakthroughs.
+                    </p>
+<blockquote class="border-l-4 border-primary-container pl-6 italic text-primary text-body-lg">
+                        "I came to Rio for the surf, but I stayed for the community. Learning Portuguese while training with local pros changed my entire perspective on Brazil."
+                        <cite class="block font-label-bold mt-4 not-italic text-secondary">— ALEX M., CLUB MEMBER</cite>
+</blockquote>
+</div>
+<div class="md:w-1/2 order-1 md:order-2">
+<div class="aspect-square bg-gradient-to-tr from-primary-container/30 to-background rounded-full p-4">
+<img class="w-full h-full object-cover rounded-full border-4 border-background" data-alt="A candid, warm photo of a diverse group of people from different nationalities laughing together around a table at an outdoor Rio café after a workout. The lighting is soft and natural, with the vibrant greenery of the city in the background. The composition is intimate and authentic, showcasing the genuine human connection and community spirit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClZ1edXFyg-kZybLdrYs3VuKw8MEz1xNUqY_1cy4YJRiH3htA9MRtrYeB_sqen_Iluw0gnGlcf57k_O9v46r0LmW4nr14FxFBU_w06b8OOn7qUQdui2r_LdpCaAkhl_YMnrjgjPnPY88AsdS-GwKUPkgAz2fP0PjAmI9ZTCcSa2NEG3a2ahFFuF_B7aBZK7YZ4s3OryVBuY0xlsd_UYlMKHtEYjMipmkfo2PvzywroUMEAGUB9hCn_oUqYcNN1pH4_PK6kWyL5m1E"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Work With Us -->
+<section id="work-with-us" class="py-stack-lg bg-background reveal">
+<div class="max-w-7xl mx-auto px-gutter grid grid-cols-1 lg:grid-cols-[.85fr_1.15fr] gap-stack-lg items-center">
+<div class="space-y-stack-md">
+<span class="bg-primary-container text-on-primary-container font-label-bold px-3 py-1 rounded-full uppercase inline-block">For gyms and studios</span>
+<h2 class="font-headline-lg text-primary uppercase">IMMERSIVE ENGLISH TRAINING FOR FITNESS TEAMS</h2>
+<p class="font-body-lg text-on-surface-variant">
+                        We partner with gyms, studios, and wellness brands that want their staff to serve international clients with confidence. Your team learns the English they actually use on the floor, at reception, in sales conversations, and during real member interactions.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<h3 class="font-label-bold text-primary uppercase mb-2">Staff confidence</h3>
+<p class="font-label-sm text-secondary leading-relaxed">Role plays, scripts, and live practice for trainers, sales teams, and front desk staff.</p>
+</div>
+<div class="p-stack-md bg-surface-container border border-outline-variant rounded-lg">
+<h3 class="font-label-bold text-primary uppercase mb-2">Built for gyms</h3>
+<p class="font-label-sm text-secondary leading-relaxed">Custom vocabulary for classes, assessments, safety, hospitality, and upsells.</p>
+</div>
+</div>
+<a href="#signup" class="magnetic-btn inline-flex bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-label-bold uppercase">Work With Us</a>
+</div>
+<div class="relative overflow-hidden rounded-xl border border-outline-variant min-h-[440px]">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Diverse fitness team receiving immersive English training inside a Rio gym" src="assets/stitch-rio-fit-extra/boxing.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
+<div class="absolute bottom-0 left-0 right-0 p-8">
+<p class="font-headline-md text-primary uppercase max-w-xl">Train your staff to welcome the world.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section id="signup" class="py-24 relative overflow-hidden bg-black text-center reveal">
+<div class="absolute inset-0 opacity-20">
+<div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-primary-container/40 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-3xl mx-auto px-gutter">
+<h2 class="font-headline-xl text-primary uppercase mb-stack-md tracking-normal">READY TO <span class="text-primary-container italic">VIBE HARD?</span></h2>
+<p class="font-body-lg text-secondary mb-stack-lg">
+                    Join the ranks of Rio's most ambitious community. Fluency, fitness, and flavor await.
+                </p>
+<form id="signupForm" class="mx-auto max-w-3xl grid gap-4 text-left">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="field-wrap">
+<label for="signupName">Name</label>
+<input id="signupName" name="name" autocomplete="name" class="form-input bg-zinc-900 border border-zinc-800 text-white px-6 py-4 rounded-lg font-lexend" placeholder="Your name" type="text" required/>
+</div>
+<div class="field-wrap">
+<label for="signupEmail">Email</label>
+<input id="signupEmail" name="email" autocomplete="email" class="form-input bg-zinc-900 border border-zinc-800 text-white px-6 py-4 rounded-lg font-lexend" placeholder="you@email.com" type="email" required/>
+</div>
+<div class="field-wrap">
+<label for="signupPhone">Phone / WhatsApp</label>
+<input id="signupPhone" name="phone" autocomplete="tel" class="form-input bg-zinc-900 border border-zinc-800 text-white px-6 py-4 rounded-lg font-lexend" placeholder="+55 21 99999-9999" type="tel" required/>
+</div>
+</div>
+<label class="flex gap-3 text-sm text-zinc-400 leading-relaxed">
+<input id="signupConsent" type="checkbox" required class="mt-1 rounded border-zinc-700 bg-zinc-900 text-primary-container focus:ring-primary-container"/>
+<span>I agree to receive Rio Fit Club updates by email, SMS, and WhatsApp. Message frequency varies. Message/data rates may apply. Reply STOP to opt out or HELP for help. I accept the <a class="text-primary-container underline" href="/legal.html">Terms & Privacy Policy</a>.</span>
+</label>
+<button id="signupSubmit" class="submit-ready magnetic-btn bg-primary-container text-on-primary-container px-10 py-4 rounded-lg font-headline-md uppercase hover:shadow-[0_0_25px_rgba(31,255,163,0.6)] text-center" type="submit">GET ACCESS</button>
+<p id="signupMsg" class="hidden text-center text-primary-container font-label-bold uppercase tracking-widest" aria-live="polite"></p>
+</form>
+<p class="mt-8 text-zinc-500 font-label-sm uppercase tracking-widest">Limited founding access available now</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-zinc-900 bg-zinc-950">
+<div class="max-w-7xl mx-auto px-8 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-xl font-black text-primary-container uppercase tracking-normal">RIO FIT CLUB</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-lexend text-sm uppercase tracking-wider text-zinc-500 hover:text-zinc-200 transition-colors focus:ring-2 focus:ring-primary-container" href="#signup">Instagram</a>
+<a class="font-lexend text-sm uppercase tracking-wider text-zinc-500 hover:text-zinc-200 transition-colors focus:ring-2 focus:ring-primary-container" href="#signup">YouTube</a>
+<a class="font-lexend text-sm uppercase tracking-wider text-zinc-500 hover:text-zinc-200 transition-colors focus:ring-2 focus:ring-primary-container" href="#signup">WhatsApp</a>
+<a class="font-lexend text-sm uppercase tracking-wider text-zinc-500 hover:text-zinc-200 transition-colors focus:ring-2 focus:ring-primary-container" href="#signup">Contact Us</a>
+<a class="font-lexend text-sm uppercase tracking-wider text-zinc-500 hover:text-zinc-200 transition-colors focus:ring-2 focus:ring-primary-container" href="/legal.html">Privacy Policy</a>
+</div>
+<p class="font-lexend text-sm uppercase tracking-wider text-zinc-500 text-center md:text-right">
+                © 2024 RIO FIT CLUB. VIBE HARD. LEARN FAST.
+            </p>
+</div>
+</footer>
+<!-- FAB (Suppressed on Home according to instructions for specific actions, but shown here for primary 'Contact' intent) -->
+<a href="#signup" aria-label="Open signup form" class="fixed bottom-8 right-8 bg-primary-container text-on-primary-container w-16 h-16 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(31,255,163,0.4)] active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl" data-icon="forum">forum</span>
+</a>
+<!-- Exit Intent Lead Magnet -->
+<div id="exitModal" class="exit-modal fixed inset-0 z-[70] bg-black/78 backdrop-blur-lg flex items-center justify-center px-4" role="dialog" aria-modal="true" aria-labelledby="exitTitle">
+<div class="exit-panel relative w-full max-w-2xl rounded-xl border border-primary-container/35 bg-surface-container-high shadow-[0_0_45px_rgba(31,255,163,.18)] overflow-hidden">
+<button id="exitClose" class="icon-button absolute right-4 top-4 z-10 text-primary-container bg-black/30" type="button" aria-label="Close lead magnet">
+<span class="material-symbols-outlined">close</span>
+</button>
+<div class="grid grid-cols-1 md:grid-cols-[.85fr_1.15fr]">
+<div class="relative min-h-[220px] md:min-h-full">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Rio Fit Club rooftop gathering in Rio" src="assets/stitch-rio-fit-extra/social-gathering.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
+<div class="absolute bottom-5 left-5 right-5">
+<span class="bg-primary-container text-on-primary-container font-label-bold px-3 py-1 rounded-full uppercase inline-block">Free guide</span>
+</div>
+</div>
+<div class="p-6 md:p-8">
+<h2 id="exitTitle" class="font-headline-lg text-primary uppercase mb-3">Before you go, get the Rio starter pack.</h2>
+<p class="font-body-md text-on-surface-variant mb-5">Grab the language, fitness, and community cheat sheet for moving through Rio with more confidence.</p>
+<form id="leadMagnetForm" class="grid gap-4">
+<div class="field-wrap">
+<label for="leadName">Name</label>
+<input id="leadName" name="name" autocomplete="name" class="form-input bg-zinc-900 border border-zinc-800 text-white px-5 py-3 rounded-lg font-lexend" placeholder="Your name" type="text" required/>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="field-wrap">
+<label for="leadPhone">Phone number</label>
+<input id="leadPhone" name="phone" autocomplete="tel" class="form-input bg-zinc-900 border border-zinc-800 text-white px-5 py-3 rounded-lg font-lexend" placeholder="+55 21 99999-9999" type="tel" required/>
+</div>
+<div class="field-wrap">
+<label for="leadEmail">Email</label>
+<input id="leadEmail" name="email" autocomplete="email" class="form-input bg-zinc-900 border border-zinc-800 text-white px-5 py-3 rounded-lg font-lexend" placeholder="you@email.com" type="email" required/>
+</div>
+</div>
+<div class="field-wrap">
+<label for="leadLanguage">Language of choice</label>
+<select id="leadLanguage" name="language" class="form-input bg-zinc-900 border border-zinc-800 text-white px-5 py-3 rounded-lg font-lexend" required>
+<option value="en">English</option>
+<option value="pt">Português</option>
+<option value="fr">Français</option>
+<option value="zh">中文</option>
+<option value="es">Español</option>
+</select>
+</div>
+<p class="text-xs text-zinc-400 leading-relaxed">We will send the guide and future Rio Fit Club emails in your selected language. You can unsubscribe anytime.</p>
+<button id="leadMagnetSubmit" class="submit-ready magnetic-btn bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-label-bold uppercase" type="submit">Send My Guide</button>
+<p id="leadMagnetMsg" class="hidden text-primary-container font-label-bold uppercase tracking-widest text-sm" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script>
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+},{threshold:.14});
+reveals.forEach(el=>observer.observe(el));
+
+const I18N = {
+  en: {
+    htmlLang: 'en',
+    title: 'Rio Fit Club · Electric Fitness, Language & Community in Rio',
+    description: "Rio Fit Club is Rio's electric fitness and language community: immersive training, social gatherings, combat sports, wellness, and multilingual access to the city.",
+    heroTitle: 'Stop visiting Rio.<br/>Start <span class="text-primary-container italic">belonging</span> here.',
+    consent: 'I agree to receive Rio Fit Club updates by email, SMS, and WhatsApp. Message frequency varies. Message/data rates may apply. Reply STOP to opt out or HELP for help. I accept the <a class="text-primary-container underline" href="/legal.html">Terms & Privacy Policy</a>.',
+    messages: {
+      submitting: 'Submitting...',
+      incomplete: 'Please complete every field and consent.',
+      duplicate: 'You are already on the list.',
+      error: 'Something went wrong. Try again.',
+      success: 'You are in. Welcome to Rio Fit Club.',
+      button: 'GET ACCESS'
+    },
+    placeholders: {
+      signupName: 'Your name',
+      signupEmail: 'you@email.com',
+      signupPhone: '+55 21 99999-9999'
+    },
+    text: {}
+  },
+  pt: {
+    htmlLang: 'pt-BR',
+    title: 'Rio Fit Club · Fitness elétrico, idiomas e comunidade no Rio',
+    description: 'O Rio Fit Club é a comunidade elétrica de fitness e idiomas do Rio: treinos imersivos, encontros sociais, lutas, bem-estar e acesso multilíngue à cidade.',
+    heroTitle: 'Pare de visitar o Rio.<br/>Comece a <span class="text-primary-container italic">pertencer</span> aqui.',
+    consent: 'Aceito receber atualizações do Rio Fit Club por email, SMS e WhatsApp. A frequência das mensagens varia. Tarifas de mensagem/dados podem ser aplicadas. Responda STOP para cancelar ou HELP para ajuda. Aceito os <a class="text-primary-container underline" href="/legal.html">Termos e Política de Privacidade</a>.',
+    messages: {
+      submitting: 'Enviando...',
+      incomplete: 'Preencha todos os campos e dê seu consentimento.',
+      duplicate: 'Você já está na lista.',
+      error: 'Algo deu errado. Tente novamente.',
+      success: 'Você entrou. Boas-vindas ao Rio Fit Club.',
+      button: 'GARANTIR ACESSO'
+    },
+    placeholders: {
+      signupName: 'Seu nome',
+      signupEmail: 'voce@email.com',
+      signupPhone: '+55 21 99999-9999'
+    },
+    text: {
+      'Courses': 'Cursos',
+      'Events': 'Eventos',
+      'Gatherings': 'Encontros',
+      'Disciplines': 'Modalidades',
+      'Community': 'Comunidade',
+      'JOIN THE CLUB': 'ENTRE PARA O CLUBE',
+      'SEE THE PATH': 'VER O CAMINHO',
+      'Language. Fitness. Rio access.': 'Idioma. Fitness. Acesso ao Rio.',
+      'Rio Fit Club turns workouts, language, and real community into your unfair advantage in the most alive city on earth. Learn faster, train harder, meet better people, and move through Rio like you actually have a place here.': 'O Rio Fit Club transforma treinos, idioma e comunidade real na sua vantagem em uma das cidades mais vivas do mundo. Aprenda mais rápido, treine mais forte, conheça pessoas melhores e circule pelo Rio como quem realmente pertence.',
+      'THE RIO VIBE': 'A VIBE DO RIO',
+      'WHERE EXPATS & LOCALS COLLIDE': 'ONDE EXPATS E LOCAIS SE ENCONTRAM',
+      'Forget traditional classrooms. Rio Fit Club is a kinetic ecosystem where language learning happens in motion. We bridge the gap between global explorers and Rio’s elite athletes, creating a high-octane community built on sweat, slang, and shared victory.': 'Esqueça as salas de aula tradicionais. O Rio Fit Club é um ecossistema em movimento onde o idioma é aprendido na prática. Conectamos exploradores globais aos atletas do Rio, criando uma comunidade intensa feita de suor, gírias e vitórias compartilhadas.',
+      'Active Members': 'Membros ativos',
+      'Sports Disciplines': 'Modalidades esportivas',
+      'After the workout': 'Depois do treino',
+      'SOCIAL GATHERINGS WITH A RIO PULSE': 'ENCONTROS SOCIAIS COM PULSO CARIOCA',
+      'HEALTH. WELLNESS. FUN. ENERGY.': 'SAÚDE. BEM-ESTAR. DIVERSÃO. ENERGIA.',
+      'Our gatherings are a mix of health, wellness, fun, and energy. This is where the training turns into friendships, the language practice becomes natural, and the city starts to feel like home.': 'Nossos encontros misturam saúde, bem-estar, diversão e energia. É aqui que o treino vira amizade, a prática do idioma fica natural e a cidade começa a parecer casa.',
+      'Energy': 'Energia',
+      'Rooftop nights, beach hangs, and post-session momentum.': 'Noites em rooftops, encontros na praia e energia depois das sessões.',
+      'Wellness': 'Bem-estar',
+      'Recovery, breath, mobility, and community rhythm.': 'Recuperação, respiração, mobilidade e ritmo de comunidade.',
+      'Connection': 'Conexão',
+      'Locals, expats, athletes, and friends in motion.': 'Locais, expats, atletas e amigos em movimento.',
+      'CORE': 'PILARES',
+      'PILLARS': 'CENTRAIS',
+      'Fluency in Motion': 'Fluência em Movimento',
+      'LANGUAGE COURSES': 'CURSOS DE IDIOMAS',
+      'Specialized Portuguese for expats and English for fitness professionals. Master the vocabulary of performance while living the lifestyle.': 'Português especializado para expats e inglês para profissionais fitness. Domine o vocabulário da performance enquanto vive o estilo de vida.',
+      'FITNESS EVENTS': 'EVENTOS FITNESS',
+      "From sunrise cycling on the coast to elite powerlifting meets. We don't just train; we compete together.": 'De pedaladas ao nascer do sol na orla a encontros de powerlifting. Nós não apenas treinamos; competimos juntos.',
+      'SIGNATURE HUB': 'HUB EXCLUSIVO',
+      'Our exclusive digital sanctuary for tailored courses and global community connection. Your portal to Rio.': 'Nosso espaço digital exclusivo para cursos personalizados e conexão com a comunidade global. Seu portal para o Rio.',
+      'READY TO LEVEL UP?': 'PRONTO PARA SUBIR DE NÍVEL?',
+      'Get access to all events and digital materials.': 'Acesse todos os eventos e materiais digitais.',
+      'Get Started': 'Começar',
+      'ELECTRIC': 'MODALIDADES',
+      'DISCIPLINES': 'ELÉTRICAS',
+      'Brazil is not one face, one body type, or one story. The club should feel like the city: mixed, loud, athletic, sunlit, and alive.': 'O Brasil não é um rosto, um corpo ou uma história só. O clube precisa parecer com a cidade: misturado, vibrante, atlético, ensolarado e vivo.',
+      'Tennis': 'Tênis',
+      'Basketball': 'Basquete',
+      'Volleyball': 'Vôlei',
+      'Powerlifting': 'Powerlifting',
+      'Run Club': 'Clube de corrida',
+      'Cycling': 'Ciclismo',
+      'Surf': 'Surfe',
+      'Jiu-Jitsu': 'Jiu-Jitsu',
+      'Kickboxing': 'Kickboxing',
+      'Boxing': 'Boxe',
+      'Yoga': 'Yoga',
+      'LOCAL SOUL,': 'ALMA LOCAL,',
+      'GLOBAL REACH': 'ALCANCE GLOBAL',
+      "Rio Fit Club isn't just a gym; it's a social catalyst. By integrating language immersion into the city's pulse, we create organic networking opportunities that lead to lifelong friendships and professional breakthroughs.": 'O Rio Fit Club não é apenas uma academia; é um catalisador social. Ao integrar imersão em idiomas ao pulso da cidade, criamos oportunidades naturais de networking que viram amizades para a vida e avanços profissionais.',
+      '"I came to Rio for the surf, but I stayed for the community. Learning Portuguese while training with local pros changed my entire perspective on Brazil."': '"Vim ao Rio pelo surfe, mas fiquei pela comunidade. Aprender português treinando com profissionais locais mudou completamente minha visão do Brasil."',
+      '— ALEX M., CLUB MEMBER': '— ALEX M., MEMBRO DO CLUBE',
+      'READY TO': 'PRONTO PARA',
+      'VIBE HARD?': 'VIVER A VIBE?',
+      "Join the ranks of Rio's most ambitious community. Fluency, fitness, and flavor await.": 'Entre para uma das comunidades mais ambiciosas do Rio. Fluência, fitness e sabor esperam por você.',
+      'Name': 'Nome',
+      'Email': 'Email',
+      'Phone / WhatsApp': 'Telefone / WhatsApp',
+      'GET ACCESS': 'GARANTIR ACESSO',
+      'Limited founding access available now': 'Acesso fundador limitado disponível agora',
+      'Contact Us': 'Contato',
+      'Privacy Policy': 'Política de Privacidade',
+      '© 2024 RIO FIT CLUB. VIBE HARD. LEARN FAST.': '© 2024 RIO FIT CLUB. VIVA A VIBE. APRENDA RÁPIDO.'
+    }
+  },
+  fr: {
+    htmlLang: 'fr',
+    title: 'Rio Fit Club · Fitness électrique, langues et communauté à Rio',
+    description: 'Rio Fit Club est la communauté électrique de fitness et de langues à Rio: entraînement immersif, rencontres sociales, sports de combat, wellness et accès multilingue à la ville.',
+    heroTitle: 'Arrête de visiter Rio.<br/>Commence à y <span class="text-primary-container italic">appartenir</span>.',
+    consent: 'J’accepte de recevoir les actualités de Rio Fit Club par email, SMS et WhatsApp. La fréquence des messages varie. Des frais de message/données peuvent s’appliquer. Réponds STOP pour te désinscrire ou HELP pour obtenir de l’aide. J’accepte les <a class="text-primary-container underline" href="/legal.html">Conditions et la Politique de confidentialité</a>.',
+    messages: {
+      submitting: 'Envoi...',
+      incomplete: 'Complète tous les champs et donne ton consentement.',
+      duplicate: 'Tu es déjà sur la liste.',
+      error: 'Une erreur est survenue. Réessaie.',
+      success: 'Tu es inscrit. Bienvenue au Rio Fit Club.',
+      button: 'OBTENIR L’ACCÈS'
+    },
+    placeholders: {
+      signupName: 'Ton nom',
+      signupEmail: 'toi@email.com',
+      signupPhone: '+55 21 99999-9999'
+    },
+    text: {
+      'Courses': 'Cours',
+      'Events': 'Événements',
+      'Gatherings': 'Rencontres',
+      'Disciplines': 'Disciplines',
+      'Community': 'Communauté',
+      'JOIN THE CLUB': 'REJOINDRE LE CLUB',
+      'SEE THE PATH': 'VOIR LE PARCOURS',
+      'Language. Fitness. Rio access.': 'Langue. Fitness. Accès à Rio.',
+      'Rio Fit Club turns workouts, language, and real community into your unfair advantage in the most alive city on earth. Learn faster, train harder, meet better people, and move through Rio like you actually have a place here.': 'Rio Fit Club transforme l’entraînement, la langue et la vraie communauté en avantage décisif dans l’une des villes les plus vivantes au monde. Apprends plus vite, entraîne-toi plus fort, rencontre les bonnes personnes et circule dans Rio comme si tu y avais déjà ta place.',
+      'THE RIO VIBE': 'L’ÉNERGIE DE RIO',
+      'WHERE EXPATS & LOCALS COLLIDE': 'LÀ OÙ EXPATS ET LOCAUX SE RENCONTRENT',
+      'Forget traditional classrooms. Rio Fit Club is a kinetic ecosystem where language learning happens in motion. We bridge the gap between global explorers and Rio’s elite athletes, creating a high-octane community built on sweat, slang, and shared victory.': 'Oublie les salles de classe classiques. Rio Fit Club est un écosystème en mouvement où l’apprentissage des langues se vit dans l’action. Nous rapprochons les explorateurs du monde et les athlètes de Rio pour créer une communauté intense, faite de sueur, d’argot et de victoires partagées.',
+      'Active Members': 'Membres actifs',
+      'Sports Disciplines': 'Disciplines sportives',
+      'After the workout': 'Après l’entraînement',
+      'SOCIAL GATHERINGS WITH A RIO PULSE': 'RENCONTRES SOCIALES AU RYTHME DE RIO',
+      'HEALTH. WELLNESS. FUN. ENERGY.': 'SANTÉ. BIEN-ÊTRE. PLAISIR. ÉNERGIE.',
+      'Our gatherings are a mix of health, wellness, fun, and energy. This is where the training turns into friendships, the language practice becomes natural, and the city starts to feel like home.': 'Nos rencontres mélangent santé, bien-être, plaisir et énergie. C’est là que l’entraînement devient amitié, que la pratique de la langue devient naturelle et que la ville commence à ressembler à une maison.',
+      'Energy': 'Énergie',
+      'Rooftop nights, beach hangs, and post-session momentum.': 'Soirées rooftop, moments à la plage et énergie après les sessions.',
+      'Wellness': 'Bien-être',
+      'Recovery, breath, mobility, and community rhythm.': 'Récupération, respiration, mobilité et rythme collectif.',
+      'Connection': 'Connexion',
+      'Locals, expats, athletes, and friends in motion.': 'Locaux, expats, athlètes et amis en mouvement.',
+      'CORE': 'PILIERS',
+      'PILLARS': 'CENTRAUX',
+      'Fluency in Motion': 'Fluidité en mouvement',
+      'LANGUAGE COURSES': 'COURS DE LANGUES',
+      'Specialized Portuguese for expats and English for fitness professionals. Master the vocabulary of performance while living the lifestyle.': 'Portugais spécialisé pour les expats et anglais pour les professionnels du fitness. Maîtrise le vocabulaire de la performance tout en vivant le lifestyle.',
+      'FITNESS EVENTS': 'ÉVÉNEMENTS FITNESS',
+      "From sunrise cycling on the coast to elite powerlifting meets. We don't just train; we compete together.": 'Des sorties vélo au lever du soleil aux rencontres de powerlifting. Nous ne faisons pas que nous entraîner; nous avançons ensemble.',
+      'SIGNATURE HUB': 'HUB EXCLUSIF',
+      'Our exclusive digital sanctuary for tailored courses and global community connection. Your portal to Rio.': 'Notre espace digital exclusif pour des cours personnalisés et une connexion avec la communauté mondiale. Ton portail vers Rio.',
+      'READY TO LEVEL UP?': 'PRÊT À PASSER AU NIVEAU SUPÉRIEUR ?',
+      'Get access to all events and digital materials.': 'Accède à tous les événements et supports digitaux.',
+      'Get Started': 'Commencer',
+      'ELECTRIC': 'DISCIPLINES',
+      'DISCIPLINES': 'ÉLECTRIQUES',
+      'Brazil is not one face, one body type, or one story. The club should feel like the city: mixed, loud, athletic, sunlit, and alive.': 'Le Brésil n’a pas un seul visage, un seul corps ou une seule histoire. Le club doit ressembler à la ville: mixte, vivant, athlétique, solaire et vibrant.',
+      'Tennis': 'Tennis',
+      'Basketball': 'Basket',
+      'Volleyball': 'Volley',
+      'Powerlifting': 'Powerlifting',
+      'Run Club': 'Club de course',
+      'Cycling': 'Cyclisme',
+      'Surf': 'Surf',
+      'Jiu-Jitsu': 'Jiu-Jitsu',
+      'Kickboxing': 'Kickboxing',
+      'Boxing': 'Boxe',
+      'Yoga': 'Yoga',
+      'LOCAL SOUL,': 'ÂME LOCALE,',
+      'GLOBAL REACH': 'PORTÉE MONDIALE',
+      "Rio Fit Club isn't just a gym; it's a social catalyst. By integrating language immersion into the city's pulse, we create organic networking opportunities that lead to lifelong friendships and professional breakthroughs.": 'Rio Fit Club n’est pas seulement une salle de sport; c’est un catalyseur social. En intégrant l’immersion linguistique au rythme de la ville, nous créons des opportunités naturelles de réseau qui deviennent des amitiés durables et des avancées professionnelles.',
+      '"I came to Rio for the surf, but I stayed for the community. Learning Portuguese while training with local pros changed my entire perspective on Brazil."': '"Je suis venu à Rio pour le surf, mais je suis resté pour la communauté. Apprendre le portugais en m’entraînant avec des pros locaux a changé toute ma vision du Brésil."',
+      '— ALEX M., CLUB MEMBER': '— ALEX M., MEMBRE DU CLUB',
+      'READY TO': 'PRÊT À',
+      'VIBE HARD?': 'VIVRE LA VIBE ?',
+      "Join the ranks of Rio's most ambitious community. Fluency, fitness, and flavor await.": 'Rejoins l’une des communautés les plus ambitieuses de Rio. Fluidité, fitness et saveur t’attendent.',
+      'Name': 'Nom',
+      'Email': 'Email',
+      'Phone / WhatsApp': 'Téléphone / WhatsApp',
+      'GET ACCESS': 'OBTENIR L’ACCÈS',
+      'Limited founding access available now': 'Accès fondateur limité disponible maintenant',
+      'Contact Us': 'Contact',
+      'Privacy Policy': 'Politique de confidentialité',
+      '© 2024 RIO FIT CLUB. VIBE HARD. LEARN FAST.': '© 2024 RIO FIT CLUB. VIS LA VIBE. APPRENDS VITE.'
+    }
+  },
+  zh: {
+    htmlLang: 'zh-CN',
+    title: 'Rio Fit Club · 里约高能健身、语言与社群',
+    description: 'Rio Fit Club 是里约高能健身与语言社群：沉浸式训练、社交聚会、格斗运动、健康体验，以及多语言城市入口。',
+    heroTitle: '别只是参观里约。<br/>从这里开始真正<span class="text-primary-container italic">融入</span>。',
+    consent: '我同意通过电子邮件、短信和 WhatsApp 接收 Rio Fit Club 的更新。消息频率可能变化。可能产生短信/数据费用。回复 STOP 可退订，回复 HELP 可获取帮助。我接受<a class="text-primary-container underline" href="/legal.html">条款与隐私政策</a>。',
+    messages: {
+      submitting: '提交中...',
+      incomplete: '请完成所有字段并确认同意。',
+      duplicate: '你已经在名单上。',
+      error: '出了点问题，请再试一次。',
+      success: '你已加入。欢迎来到 Rio Fit Club。',
+      button: '获取访问权限'
+    },
+    placeholders: {
+      signupName: '你的姓名',
+      signupEmail: 'you@email.com',
+      signupPhone: '+55 21 99999-9999'
+    },
+    text: {
+      'Courses': '课程',
+      'Events': '活动',
+      'Gatherings': '社交聚会',
+      'Disciplines': '项目',
+      'Community': '社群',
+      'JOIN THE CLUB': '加入俱乐部',
+      'SEE THE PATH': '查看路径',
+      'Language. Fitness. Rio access.': '语言。健身。里约入口。',
+      'Rio Fit Club turns workouts, language, and real community into your unfair advantage in the most alive city on earth. Learn faster, train harder, meet better people, and move through Rio like you actually have a place here.': 'Rio Fit Club 把训练、语言和真实社群变成你在这座充满生命力城市中的优势。学得更快，练得更强，遇见更好的人，在里约行动得像真正属于这里。',
+      'THE RIO VIBE': '里约氛围',
+      'WHERE EXPATS & LOCALS COLLIDE': '海外人士与本地人相遇的地方',
+      'Forget traditional classrooms. Rio Fit Club is a kinetic ecosystem where language learning happens in motion. We bridge the gap between global explorers and Rio’s elite athletes, creating a high-octane community built on sweat, slang, and shared victory.': '忘掉传统课堂。Rio Fit Club 是一个流动的生态系统，语言学习发生在运动中。我们连接全球探索者与里约精英运动者，打造一个由汗水、俚语和共同胜利组成的高能社群。',
+      'Active Members': '活跃会员',
+      'Sports Disciplines': '运动项目',
+      'After the workout': '训练之后',
+      'SOCIAL GATHERINGS WITH A RIO PULSE': '带着里约节奏的社交聚会',
+      'HEALTH. WELLNESS. FUN. ENERGY.': '健康。疗愈。乐趣。能量。',
+      'Our gatherings are a mix of health, wellness, fun, and energy. This is where the training turns into friendships, the language practice becomes natural, and the city starts to feel like home.': '我们的聚会融合健康、疗愈、乐趣和能量。在这里，训练变成友谊，语言练习变得自然，这座城市开始像家一样。',
+      'Energy': '能量',
+      'Rooftop nights, beach hangs, and post-session momentum.': '屋顶夜晚、海滩相聚和训练后的能量延续。',
+      'Wellness': '疗愈',
+      'Recovery, breath, mobility, and community rhythm.': '恢复、呼吸、灵活性和社群节奏。',
+      'Connection': '连接',
+      'Locals, expats, athletes, and friends in motion.': '本地人、海外人士、运动者和朋友一起行动。',
+      'CORE': '核心',
+      'PILLARS': '支柱',
+      'Fluency in Motion': '流利在运动中',
+      'LANGUAGE COURSES': '语言课程',
+      'Specialized Portuguese for expats and English for fitness professionals. Master the vocabulary of performance while living the lifestyle.': '为海外人士设计的葡萄牙语，以及为健身专业人士设计的英语。边生活边掌握表现力词汇。',
+      'FITNESS EVENTS': '健身活动',
+      "From sunrise cycling on the coast to elite powerlifting meets. We don't just train; we compete together.": '从海岸日出骑行到精英力量举聚会。我们不只是训练，我们一起挑战。',
+      'SIGNATURE HUB': '专属平台',
+      'Our exclusive digital sanctuary for tailored courses and global community connection. Your portal to Rio.': '我们的专属数字空间，提供定制课程并连接全球社群。你的里约入口。',
+      'READY TO LEVEL UP?': '准备升级了吗？',
+      'Get access to all events and digital materials.': '获取所有活动和数字材料。',
+      'Get Started': '开始',
+      'ELECTRIC': '高能',
+      'DISCIPLINES': '项目',
+      'Brazil is not one face, one body type, or one story. The club should feel like the city: mixed, loud, athletic, sunlit, and alive.': '巴西不是一种面孔、一种身材或一种故事。俱乐部应该像这座城市一样：多元、热烈、运动、阳光、充满生命力。',
+      'Tennis': '网球',
+      'Basketball': '篮球',
+      'Volleyball': '排球',
+      'Powerlifting': '力量举',
+      'Run Club': '跑步俱乐部',
+      'Cycling': '骑行',
+      'Surf': '冲浪',
+      'Jiu-Jitsu': '柔术',
+      'Kickboxing': '踢拳',
+      'Boxing': '拳击',
+      'Yoga': '瑜伽',
+      'LOCAL SOUL,': '本地灵魂，',
+      'GLOBAL REACH': '全球连接',
+      "Rio Fit Club isn't just a gym; it's a social catalyst. By integrating language immersion into the city's pulse, we create organic networking opportunities that lead to lifelong friendships and professional breakthroughs.": 'Rio Fit Club 不只是一间健身房；它是社交催化剂。通过把语言沉浸融入城市节奏，我们创造自然的人脉机会，带来持久友谊和职业突破。',
+      '"I came to Rio for the surf, but I stayed for the community. Learning Portuguese while training with local pros changed my entire perspective on Brazil."': '“我为了冲浪来到里约，却因为社群留下。和本地专业人士一起训练并学习葡萄牙语，彻底改变了我对巴西的看法。”',
+      '— ALEX M., CLUB MEMBER': '— ALEX M.，俱乐部会员',
+      'READY TO': '准备好',
+      'VIBE HARD?': '感受能量了吗？',
+      "Join the ranks of Rio's most ambitious community. Fluency, fitness, and flavor await.": '加入里约最有野心的社群之一。流利、健身和生活滋味都在等你。',
+      'Name': '姓名',
+      'Email': '电子邮件',
+      'Phone / WhatsApp': '电话 / WhatsApp',
+      'GET ACCESS': '获取访问权限',
+      'Limited founding access available now': '创始会员名额限量开放',
+      'Contact Us': '联系我们',
+      'Privacy Policy': '隐私政策',
+      '© 2024 RIO FIT CLUB. VIBE HARD. LEARN FAST.': '© 2024 RIO FIT CLUB. 高能生活。快速学习。'
+    }
+  },
+  es: {
+    htmlLang: 'es',
+    title: 'Rio Fit Club · Fitness eléctrico, idiomas y comunidad en Río',
+    description: 'Rio Fit Club es la comunidad eléctrica de fitness e idiomas en Río: entrenamientos inmersivos, encuentros sociales, deportes de combate, bienestar y acceso multilingüe a la ciudad.',
+    heroTitle: 'Deja de visitar Río.<br/>Empieza a <span class="text-primary-container italic">pertenecer</span> aquí.',
+    consent: 'Acepto recibir actualizaciones de Rio Fit Club por email, SMS y WhatsApp. La frecuencia de mensajes varía. Pueden aplicarse cargos por mensajes/datos. Responde STOP para cancelar o HELP para ayuda. Acepto los <a class="text-primary-container underline" href="/legal.html">Términos y la Política de Privacidad</a>.',
+    messages: {
+      submitting: 'Enviando...',
+      incomplete: 'Completa todos los campos y da tu consentimiento.',
+      duplicate: 'Ya estás en la lista.',
+      error: 'Algo salió mal. Inténtalo de nuevo.',
+      success: 'Estás dentro. Bienvenido a Rio Fit Club.',
+      button: 'OBTENER ACCESO'
+    },
+    placeholders: {
+      signupName: 'Tu nombre',
+      signupEmail: 'tu@email.com',
+      signupPhone: '+55 21 99999-9999'
+    },
+    text: {
+      'Courses': 'Cursos',
+      'Events': 'Eventos',
+      'Gatherings': 'Encuentros',
+      'Disciplines': 'Disciplinas',
+      'Community': 'Comunidad',
+      'JOIN THE CLUB': 'ÚNETE AL CLUB',
+      'SEE THE PATH': 'VER EL CAMINO',
+      'Language. Fitness. Rio access.': 'Idioma. Fitness. Acceso a Río.',
+      'Rio Fit Club turns workouts, language, and real community into your unfair advantage in the most alive city on earth. Learn faster, train harder, meet better people, and move through Rio like you actually have a place here.': 'Rio Fit Club convierte entrenamientos, idioma y comunidad real en tu ventaja dentro de una de las ciudades más vivas del planeta. Aprende más rápido, entrena más fuerte, conoce mejores personas y muévete por Río como si realmente pertenecieras.',
+      'THE RIO VIBE': 'LA VIBRA DE RÍO',
+      'WHERE EXPATS & LOCALS COLLIDE': 'DONDE EXPATS Y LOCALES SE ENCUENTRAN',
+      'Forget traditional classrooms. Rio Fit Club is a kinetic ecosystem where language learning happens in motion. We bridge the gap between global explorers and Rio’s elite athletes, creating a high-octane community built on sweat, slang, and shared victory.': 'Olvida las aulas tradicionales. Rio Fit Club es un ecosistema en movimiento donde el aprendizaje del idioma ocurre en acción. Conectamos exploradores globales con atletas de Río, creando una comunidad intensa hecha de sudor, jerga y victorias compartidas.',
+      'Active Members': 'Miembros activos',
+      'Sports Disciplines': 'Disciplinas deportivas',
+      'After the workout': 'Después del entrenamiento',
+      'SOCIAL GATHERINGS WITH A RIO PULSE': 'ENCUENTROS SOCIALES CON PULSO CARIOCA',
+      'HEALTH. WELLNESS. FUN. ENERGY.': 'SALUD. BIENESTAR. DIVERSIÓN. ENERGÍA.',
+      'Our gatherings are a mix of health, wellness, fun, and energy. This is where the training turns into friendships, the language practice becomes natural, and the city starts to feel like home.': 'Nuestros encuentros mezclan salud, bienestar, diversión y energía. Aquí el entrenamiento se convierte en amistad, la práctica del idioma se vuelve natural y la ciudad empieza a sentirse como casa.',
+      'Energy': 'Energía',
+      'Rooftop nights, beach hangs, and post-session momentum.': 'Noches en rooftop, encuentros en la playa y energía después de cada sesión.',
+      'Wellness': 'Bienestar',
+      'Recovery, breath, mobility, and community rhythm.': 'Recuperación, respiración, movilidad y ritmo de comunidad.',
+      'Connection': 'Conexión',
+      'Locals, expats, athletes, and friends in motion.': 'Locales, expats, atletas y amigos en movimiento.',
+      'CORE': 'PILARES',
+      'PILLARS': 'CENTRALES',
+      'Fluency in Motion': 'Fluidez en movimiento',
+      'LANGUAGE COURSES': 'CURSOS DE IDIOMAS',
+      'Specialized Portuguese for expats and English for fitness professionals. Master the vocabulary of performance while living the lifestyle.': 'Portugués especializado para expats e inglés para profesionales fitness. Domina el vocabulario del rendimiento mientras vives el estilo de vida.',
+      'FITNESS EVENTS': 'EVENTOS FITNESS',
+      "From sunrise cycling on the coast to elite powerlifting meets. We don't just train; we compete together.": 'Desde ciclismo al amanecer en la costa hasta encuentros de powerlifting. No solo entrenamos; competimos juntos.',
+      'SIGNATURE HUB': 'HUB EXCLUSIVO',
+      'Our exclusive digital sanctuary for tailored courses and global community connection. Your portal to Rio.': 'Nuestro espacio digital exclusivo para cursos personalizados y conexión con la comunidad global. Tu portal a Río.',
+      'READY TO LEVEL UP?': '¿LISTO PARA SUBIR DE NIVEL?',
+      'Get access to all events and digital materials.': 'Accede a todos los eventos y materiales digitales.',
+      'Get Started': 'Comenzar',
+      'ELECTRIC': 'DISCIPLINAS',
+      'DISCIPLINES': 'ELÉCTRICAS',
+      'Brazil is not one face, one body type, or one story. The club should feel like the city: mixed, loud, athletic, sunlit, and alive.': 'Brasil no es un solo rostro, un solo cuerpo ni una sola historia. El club debe sentirse como la ciudad: mezclado, fuerte, atlético, soleado y vivo.',
+      'Tennis': 'Tenis',
+      'Basketball': 'Baloncesto',
+      'Volleyball': 'Voleibol',
+      'Powerlifting': 'Powerlifting',
+      'Run Club': 'Club de running',
+      'Cycling': 'Ciclismo',
+      'Surf': 'Surf',
+      'Jiu-Jitsu': 'Jiu-Jitsu',
+      'Kickboxing': 'Kickboxing',
+      'Boxing': 'Boxeo',
+      'Yoga': 'Yoga',
+      'LOCAL SOUL,': 'ALMA LOCAL,',
+      'GLOBAL REACH': 'ALCANCE GLOBAL',
+      "Rio Fit Club isn't just a gym; it's a social catalyst. By integrating language immersion into the city's pulse, we create organic networking opportunities that lead to lifelong friendships and professional breakthroughs.": 'Rio Fit Club no es solo un gimnasio; es un catalizador social. Al integrar la inmersión lingüística al pulso de la ciudad, creamos oportunidades naturales de networking que generan amistades duraderas y avances profesionales.',
+      '"I came to Rio for the surf, but I stayed for the community. Learning Portuguese while training with local pros changed my entire perspective on Brazil."': '"Vine a Río por el surf, pero me quedé por la comunidad. Aprender portugués mientras entrenaba con profesionales locales cambió por completo mi perspectiva de Brasil."',
+      '— ALEX M., CLUB MEMBER': '— ALEX M., MIEMBRO DEL CLUB',
+      'READY TO': 'LISTO PARA',
+      'VIBE HARD?': 'VIVIR LA VIBRA?',
+      "Join the ranks of Rio's most ambitious community. Fluency, fitness, and flavor await.": 'Únete a una de las comunidades más ambiciosas de Río. Fluidez, fitness y sabor te esperan.',
+      'Name': 'Nombre',
+      'Email': 'Email',
+      'Phone / WhatsApp': 'Teléfono / WhatsApp',
+      'GET ACCESS': 'OBTENER ACCESO',
+      'Limited founding access available now': 'Acceso fundador limitado disponible ahora',
+      'Contact Us': 'Contacto',
+      'Privacy Policy': 'Política de Privacidad',
+      '© 2024 RIO FIT CLUB. VIBE HARD. LEARN FAST.': '© 2024 RIO FIT CLUB. VIVE LA VIBRA. APRENDE RÁPIDO.'
+    }
+  }
+};
+
+Object.assign(I18N.en.messages, { leadSuccess: 'Guide sent. Check your inbox.', leadButton: 'Send My Guide' });
+Object.assign(I18N.pt.messages, { leadSuccess: 'Guia enviado. Verifique seu email.', leadButton: 'Enviar meu guia' });
+Object.assign(I18N.fr.messages, { leadSuccess: 'Guide envoyé. Vérifie ta boîte email.', leadButton: 'Envoyer mon guide' });
+Object.assign(I18N.zh.messages, { leadSuccess: '指南已发送。请查看你的邮箱。', leadButton: '发送我的指南' });
+Object.assign(I18N.es.messages, { leadSuccess: 'Guía enviada. Revisa tu email.', leadButton: 'Enviar mi guía' });
+
+Object.assign(I18N.en.placeholders, { leadName: 'Your name', leadPhone: '+55 21 99999-9999', leadEmail: 'you@email.com' });
+Object.assign(I18N.pt.placeholders, { leadName: 'Seu nome', leadPhone: '+55 21 99999-9999', leadEmail: 'voce@email.com' });
+Object.assign(I18N.fr.placeholders, { leadName: 'Ton nom', leadPhone: '+55 21 99999-9999', leadEmail: 'toi@email.com' });
+Object.assign(I18N.zh.placeholders, { leadName: '你的姓名', leadPhone: '+55 21 99999-9999', leadEmail: 'you@email.com' });
+Object.assign(I18N.es.placeholders, { leadName: 'Tu nombre', leadPhone: '+55 21 99999-9999', leadEmail: 'tu@email.com' });
+
+const EXTRA_TEXT = {
+  pt: {
+    'For gyms and studios': 'Para academias e estúdios',
+    'IMMERSIVE ENGLISH TRAINING FOR FITNESS TEAMS': 'TREINAMENTO IMERSIVO DE INGLÊS PARA EQUIPES FITNESS',
+    'We partner with gyms, studios, and wellness brands that want their staff to serve international clients with confidence. Your team learns the English they actually use on the floor, at reception, in sales conversations, and during real member interactions.': 'Trabalhamos com academias, estúdios e marcas de bem-estar que querem preparar suas equipes para atender clientes internacionais com confiança. Sua equipe aprende o inglês que realmente usa no salão, na recepção, em conversas de venda e em interações reais com alunos.',
+    'Staff confidence': 'Confiança da equipe',
+    'Role plays, scripts, and live practice for trainers, sales teams, and front desk staff.': 'Simulações, scripts e prática ao vivo para treinadores, equipes de vendas e recepção.',
+    'Built for gyms': 'Feito para academias',
+    'Custom vocabulary for classes, assessments, safety, hospitality, and upsells.': 'Vocabulário personalizado para aulas, avaliações, segurança, atendimento e vendas adicionais.',
+    'Work With Us': 'Trabalhe conosco',
+    'Train your staff to welcome the world.': 'Treine sua equipe para receber o mundo.',
+    'Free guide': 'Guia grátis',
+    'Before you go, get the Rio starter pack.': 'Antes de ir, pegue o kit inicial do Rio.',
+    'Grab the language, fitness, and community cheat sheet for moving through Rio with more confidence.': 'Receba o guia rápido de idioma, fitness e comunidade para circular pelo Rio com mais confiança.',
+    'Phone number': 'Telefone',
+    'Language of choice': 'Idioma de preferência',
+    'We will send the guide and future Rio Fit Club emails in your selected language. You can unsubscribe anytime.': 'Enviaremos o guia e futuros emails do Rio Fit Club no idioma escolhido. Você pode cancelar a inscrição a qualquer momento.',
+    'Send My Guide': 'Enviar meu guia'
+  },
+  fr: {
+    'For gyms and studios': 'Pour salles et studios',
+    'IMMERSIVE ENGLISH TRAINING FOR FITNESS TEAMS': 'FORMATION D’ANGLAIS IMMERSIVE POUR ÉQUIPES FITNESS',
+    'We partner with gyms, studios, and wellness brands that want their staff to serve international clients with confidence. Your team learns the English they actually use on the floor, at reception, in sales conversations, and during real member interactions.': 'Nous accompagnons les salles, studios et marques wellness qui veulent aider leur équipe à servir les clients internationaux avec confiance. Ton équipe apprend l’anglais réellement utilisé sur le plateau, à l’accueil, en vente et dans les interactions membres.',
+    'Staff confidence': 'Confiance de l’équipe',
+    'Role plays, scripts, and live practice for trainers, sales teams, and front desk staff.': 'Jeux de rôle, scripts et pratique live pour coachs, équipes commerciales et accueil.',
+    'Built for gyms': 'Pensé pour les salles',
+    'Custom vocabulary for classes, assessments, safety, hospitality, and upsells.': 'Vocabulaire sur mesure pour cours, bilans, sécurité, accueil et ventes additionnelles.',
+    'Work With Us': 'Travailler avec nous',
+    'Train your staff to welcome the world.': 'Forme ton équipe à accueillir le monde.',
+    'Free guide': 'Guide gratuit',
+    'Before you go, get the Rio starter pack.': 'Avant de partir, récupère le starter pack de Rio.',
+    'Grab the language, fitness, and community cheat sheet for moving through Rio with more confidence.': 'Reçois la fiche pratique langue, fitness et communauté pour te déplacer dans Rio avec plus de confiance.',
+    'Phone number': 'Téléphone',
+    'Language of choice': 'Langue préférée',
+    'We will send the guide and future Rio Fit Club emails in your selected language. You can unsubscribe anytime.': 'Nous enverrons le guide et les futurs emails Rio Fit Club dans la langue choisie. Tu peux te désinscrire à tout moment.',
+    'Send My Guide': 'Envoyer mon guide'
+  },
+  zh: {
+    'For gyms and studios': '面向健身房和工作室',
+    'IMMERSIVE ENGLISH TRAINING FOR FITNESS TEAMS': '为健身团队打造的沉浸式英语培训',
+    'We partner with gyms, studios, and wellness brands that want their staff to serve international clients with confidence. Your team learns the English they actually use on the floor, at reception, in sales conversations, and during real member interactions.': '我们与健身房、工作室和健康品牌合作，帮助团队自信服务国际客户。你的团队会学习在训练区、前台、销售对话和真实会员互动中真正会用到的英语。',
+    'Staff confidence': '团队自信',
+    'Role plays, scripts, and live practice for trainers, sales teams, and front desk staff.': '为教练、销售团队和前台设计角色扮演、话术和实时练习。',
+    'Built for gyms': '为健身房打造',
+    'Custom vocabulary for classes, assessments, safety, hospitality, and upsells.': '覆盖课程、评估、安全、接待和升级销售的定制词汇。',
+    'Work With Us': '与我们合作',
+    'Train your staff to welcome the world.': '训练你的团队，迎接全世界。',
+    'Free guide': '免费指南',
+    'Before you go, get the Rio starter pack.': '离开之前，领取里约入门包。',
+    'Grab the language, fitness, and community cheat sheet for moving through Rio with more confidence.': '获取语言、健身和社群速查指南，让你更有信心地融入里约。',
+    'Phone number': '电话号码',
+    'Language of choice': '首选语言',
+    'We will send the guide and future Rio Fit Club emails in your selected language. You can unsubscribe anytime.': '我们会用你选择的语言发送指南和未来的 Rio Fit Club 邮件。你可以随时退订。',
+    'Send My Guide': '发送我的指南'
+  },
+  es: {
+    'For gyms and studios': 'Para gimnasios y estudios',
+    'IMMERSIVE ENGLISH TRAINING FOR FITNESS TEAMS': 'ENTRENAMIENTO INMERSIVO DE INGLÉS PARA EQUIPOS FITNESS',
+    'We partner with gyms, studios, and wellness brands that want their staff to serve international clients with confidence. Your team learns the English they actually use on the floor, at reception, in sales conversations, and during real member interactions.': 'Trabajamos con gimnasios, estudios y marcas wellness que quieren que su equipo atienda a clientes internacionales con confianza. Tu equipo aprende el inglés que realmente usa en sala, recepción, ventas e interacciones reales con miembros.',
+    'Staff confidence': 'Confianza del equipo',
+    'Role plays, scripts, and live practice for trainers, sales teams, and front desk staff.': 'Role plays, guiones y práctica en vivo para entrenadores, ventas y recepción.',
+    'Built for gyms': 'Hecho para gimnasios',
+    'Custom vocabulary for classes, assessments, safety, hospitality, and upsells.': 'Vocabulario personalizado para clases, evaluaciones, seguridad, atención y ventas adicionales.',
+    'Work With Us': 'Trabaja con nosotros',
+    'Train your staff to welcome the world.': 'Entrena a tu equipo para recibir al mundo.',
+    'Free guide': 'Guía gratis',
+    'Before you go, get the Rio starter pack.': 'Antes de irte, recibe el starter pack de Río.',
+    'Grab the language, fitness, and community cheat sheet for moving through Rio with more confidence.': 'Recibe la guía rápida de idioma, fitness y comunidad para moverte por Río con más confianza.',
+    'Phone number': 'Número de teléfono',
+    'Language of choice': 'Idioma preferido',
+    'We will send the guide and future Rio Fit Club emails in your selected language. You can unsubscribe anytime.': 'Enviaremos la guía y futuros emails de Rio Fit Club en el idioma elegido. Puedes cancelar la suscripción cuando quieras.',
+    'Send My Guide': 'Enviar mi guía'
+  }
+};
+Object.keys(EXTRA_TEXT).forEach((lang)=>Object.assign(I18N[lang].text, EXTRA_TEXT[lang]));
+
+const originalTextNodes = [];
+const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+  acceptNode(node){
+    const parent = node.parentElement;
+    if(!node.nodeValue.trim() || !parent || parent.closest('script,style,option')) return NodeFilter.FILTER_REJECT;
+    return NodeFilter.FILTER_ACCEPT;
+  }
+});
+let currentNode;
+while((currentNode = textWalker.nextNode())){
+  const match = currentNode.nodeValue.match(/^(\s*)([\s\S]*?)(\s*)$/);
+  originalTextNodes.push({node: currentNode, leading: match[1], text: match[2].trim(), trailing: match[3]});
+}
+
+const languageSelect = document.getElementById('languageSelect');
+const heroTitle = document.querySelector('.hero-title');
+const consentCopy = document.getElementById('signupConsent')?.nextElementSibling;
+const descriptionMeta = document.querySelector('meta[name="description"]');
+const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+const ogDescriptionMeta = document.querySelector('meta[property="og:description"]');
+
+function getLanguagePack(lang){
+  return I18N[lang] || I18N.en;
+}
+
+function tMessage(key){
+  const pack = getLanguagePack(currentLanguage);
+  return pack.messages[key] || I18N.en.messages[key];
+}
+
+let currentLanguage = localStorage.getItem('riofit_language') || 'en';
+
+function applyLanguage(lang){
+  currentLanguage = I18N[lang] ? lang : 'en';
+  const pack = getLanguagePack(currentLanguage);
+  document.documentElement.lang = pack.htmlLang;
+  document.title = pack.title;
+  if(descriptionMeta) descriptionMeta.setAttribute('content', pack.description);
+  if(ogTitleMeta) ogTitleMeta.setAttribute('content', pack.title);
+  if(ogDescriptionMeta) ogDescriptionMeta.setAttribute('content', pack.description);
+  if(heroTitle) heroTitle.innerHTML = pack.heroTitle;
+  if(consentCopy) consentCopy.innerHTML = pack.consent;
+  originalTextNodes.forEach(({node, leading, text, trailing})=>{
+    const translated = currentLanguage === 'en' ? text : (pack.text[text] || text);
+    if(node.isConnected) node.nodeValue = `${leading}${translated}${trailing}`;
+  });
+  Object.entries(pack.placeholders).forEach(([id, value])=>{
+    const input = document.getElementById(id);
+    if(input) input.placeholder = value;
+  });
+  signupSubmit.textContent = tMessage('button');
+  if(leadMagnetSubmit) leadMagnetSubmit.textContent = tMessage('leadButton');
+  if(leadLanguage) leadLanguage.value = currentLanguage;
+  languageSelect.value = currentLanguage;
+  localStorage.setItem('riofit_language', currentLanguage);
+}
+
+languageSelect.addEventListener('change', (event)=>applyLanguage(event.target.value));
+
+const SUPABASE_URL = 'https://xkpagkjzsmkwuyjfdcim.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhrcGFna2p6c21rd3V5amZkY2ltIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY0NDg4NzAsImV4cCI6MjA5MjAyNDg3MH0.lUv0LXwqUiM9yWXLe5X-CHNj9IeaVPvcSoSkyi8K2Ys';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const signupForm = document.getElementById('signupForm');
+const signupMsg = document.getElementById('signupMsg');
+const signupSubmit = document.getElementById('signupSubmit');
+const exitModal = document.getElementById('exitModal');
+const exitClose = document.getElementById('exitClose');
+const leadMagnetForm = document.getElementById('leadMagnetForm');
+const leadMagnetMsg = document.getElementById('leadMagnetMsg');
+const leadMagnetSubmit = document.getElementById('leadMagnetSubmit');
+const leadLanguage = document.getElementById('leadLanguage');
+applyLanguage(currentLanguage);
+signupForm.addEventListener('submit', async (event)=>{
+  event.preventDefault();
+  signupMsg.classList.remove('hidden');
+  signupMsg.textContent = tMessage('submitting');
+  signupSubmit.disabled = true;
+  signupSubmit.textContent = tMessage('submitting');
+  const payload = {
+    name: document.getElementById('signupName').value.trim(),
+    email: document.getElementById('signupEmail').value.trim().toLowerCase(),
+    phone: document.getElementById('signupPhone').value.trim(),
+    role: null,
+    english_level: null,
+    language: currentLanguage,
+    comm_language: currentLanguage
+  };
+  if(!payload.name || !payload.email || payload.phone.replace(/\D/g,'').length < 10 || !document.getElementById('signupConsent').checked){
+    signupMsg.textContent = tMessage('incomplete');
+    signupSubmit.disabled = false;
+    signupSubmit.textContent = tMessage('button');
+    return;
+  }
+  const { error } = await sb.from('registrations').insert([payload]);
+  if(error){
+    signupMsg.textContent = error.code === '23505' ? tMessage('duplicate') : tMessage('error');
+    signupSubmit.disabled = false;
+    signupSubmit.textContent = tMessage('button');
+    return;
+  }
+  signupForm.reset();
+  signupMsg.textContent = tMessage('success');
+  signupSubmit.disabled = false;
+  signupSubmit.textContent = tMessage('button');
+});
+
+function openExitModal(force = false){
+  if(!exitModal) return;
+  if(!force && sessionStorage.getItem('riofit_exit_modal_seen') === '1') return;
+  sessionStorage.setItem('riofit_exit_modal_seen', '1');
+  if(leadLanguage) leadLanguage.value = currentLanguage;
+  exitModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(()=>document.getElementById('leadName')?.focus(), 220);
+}
+
+function closeExitModal(){
+  if(!exitModal) return;
+  exitModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('mouseout', (event)=>{
+  if(event.clientY <= 0 && !event.relatedTarget) openExitModal();
+});
+
+setTimeout(()=>{
+  if(window.innerWidth < 768 && window.scrollY > 320) openExitModal();
+}, 32000);
+
+exitClose?.addEventListener('click', closeExitModal);
+exitModal?.addEventListener('click', (event)=>{
+  if(event.target === exitModal) closeExitModal();
+});
+document.addEventListener('keydown', (event)=>{
+  if(event.key === 'Escape' && exitModal?.classList.contains('open')) closeExitModal();
+});
+
+leadMagnetForm?.addEventListener('submit', async (event)=>{
+  event.preventDefault();
+  const selectedLanguage = leadLanguage?.value || currentLanguage;
+  leadMagnetMsg.classList.remove('hidden');
+  leadMagnetMsg.textContent = getLanguagePack(selectedLanguage).messages.submitting || tMessage('submitting');
+  leadMagnetSubmit.disabled = true;
+  leadMagnetSubmit.textContent = getLanguagePack(selectedLanguage).messages.submitting || tMessage('submitting');
+  const payload = {
+    name: document.getElementById('leadName').value.trim(),
+    email: document.getElementById('leadEmail').value.trim().toLowerCase(),
+    phone: document.getElementById('leadPhone').value.trim(),
+    role: 'lead_magnet',
+    english_level: null,
+    language: selectedLanguage,
+    comm_language: selectedLanguage
+  };
+  if(!payload.name || !payload.email || payload.phone.replace(/\D/g,'').length < 10){
+    leadMagnetMsg.textContent = getLanguagePack(selectedLanguage).messages.incomplete || tMessage('incomplete');
+    leadMagnetSubmit.disabled = false;
+    leadMagnetSubmit.textContent = getLanguagePack(selectedLanguage).messages.leadButton || tMessage('leadButton');
+    return;
+  }
+  const response = await fetch('/api/lead-magnet', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  });
+  if(!response.ok){
+    const data = await response.json().catch(()=>({}));
+    leadMagnetMsg.textContent = data.error === 'duplicate' ? (getLanguagePack(selectedLanguage).messages.duplicate || tMessage('duplicate')) : (getLanguagePack(selectedLanguage).messages.error || tMessage('error'));
+    leadMagnetSubmit.disabled = false;
+    leadMagnetSubmit.textContent = getLanguagePack(selectedLanguage).messages.leadButton || tMessage('leadButton');
+    return;
+  }
+  leadMagnetForm.reset();
+  leadLanguage.value = selectedLanguage;
+  leadMagnetMsg.textContent = getLanguagePack(selectedLanguage).messages.leadSuccess || tMessage('leadSuccess');
+  leadMagnetSubmit.disabled = false;
+  leadMagnetSubmit.textContent = getLanguagePack(selectedLanguage).messages.leadButton || tMessage('leadButton');
+});
+</script>
+</body></html>

@@ -1,0 +1,15 @@
+<svg width="1320" height="360" viewBox="0 0 1320 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Rio Fit Club one-color logo</title>
+  <desc id="desc">One-color Rio Fit Club logo for embroidery, stamps, and small production.</desc>
+  <rect width="1320" height="360" rx="40" fill="#F6FFF5"/>
+  <g transform="translate(58 52) scale(.5)" stroke="#07100A" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M82 322C126 246 190 211 260 211C322 211 370 239 420 296" stroke-width="30"/>
+    <path d="M92 261C133 185 199 146 282 151C342 154 391 182 431 231" stroke-width="22"/>
+    <path d="M144 366C192 323 236 306 285 313C335 320 373 347 410 389" stroke-width="22"/>
+    <path d="M153 354V155H286C342 155 380 188 380 238C380 277 358 304 321 318L389 354" stroke-width="30"/>
+    <path d="M153 247H273C309 247 331 229 331 202C331 176 309 159 274 159H153" stroke-width="30"/>
+  </g>
+  <text x="360" y="160" fill="#07100A" font-family="Anton, Impact, Arial Black, sans-serif" font-size="92" letter-spacing="1">RIO FIT</text>
+  <text x="362" y="244" fill="#07100A" font-family="Manrope, Arial, sans-serif" font-size="58" font-weight="900" letter-spacing="14">CLUB</text>
+  <path d="M360 276H1035" stroke="#07100A" stroke-width="12" stroke-linecap="round"/>
+</svg>

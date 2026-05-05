@@ -1,3 +1,30 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "riofitclub.com" }],
+      "destination": "/riofitclub-home.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "www.riofitclub.com" }],
+      "destination": "/riofitclub-home.html"
+    },
+    { "source": "/student/:handle", "destination": "/api/student-page?handle=:handle" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron-daily",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/cron-weekly",
+      "schedule": "0 9 * * 1"
+    },
+    {
+      "path": "/api/cron-weekly",
+      "schedule": "0 14 * * 5"
+    }
+  ]
 }

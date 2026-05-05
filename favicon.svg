@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Rio Fit Club">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="42%" r="68%">
+      <stop offset="0%" stop-color="#1fffa3" stop-opacity=".32"/>
+      <stop offset="58%" stop-color="#0c150f" stop-opacity=".96"/>
+      <stop offset="100%" stop-color="#07100a"/>
+    </radialGradient>
+    <linearGradient id="mark" x1="12" x2="52" y1="12" y2="52">
+      <stop offset="0%" stop-color="#53ffab"/>
+      <stop offset="100%" stop-color="#00e38f"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#07100a"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="url(#glow)" stroke="#1fffa3" stroke-width="2"/>
+  <path d="M16 44V20h13.2c5.8 0 9.4 3.1 9.4 8.1 0 3.2-1.5 5.7-4.3 7l5.5 8.9h-7.5l-4.6-7.8h-4.8V44H16Zm6.9-13.2h5.5c2.1 0 3.4-1 3.4-2.8 0-1.7-1.3-2.7-3.4-2.7h-5.5v5.5Z" fill="#f6fff5"/>
+  <path d="M43.6 44V20H57v5.6h-6.7v4h6.1v5.5h-6.1V44h-6.7Z" fill="url(#mark)"/>
+  <path d="M12 51h40" stroke="#1fffa3" stroke-width="3" stroke-linecap="round"/>
+</svg>

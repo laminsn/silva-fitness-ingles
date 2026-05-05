@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rio Fit Club Logo Lab</title>
+  <meta name="theme-color" content="#07100A">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --night: #07100a;
+      --deep: #0c150f;
+      --panel: #111c14;
+      --line: #2d3730;
+      --chalk: #f6fff5;
+      --muted: #b9cbbc;
+      --green: #1fffa3;
+      --cyan: #18d4e7;
+      --coral: #ff6a4d;
+    }
+    * { box-sizing: border-box; }
+    html { background: var(--night); }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--chalk);
+      background:
+        linear-gradient(135deg, rgba(24, 212, 231, .08), transparent 34rem),
+        linear-gradient(315deg, rgba(255, 106, 77, .08), transparent 30rem),
+        var(--night);
+      font-family: Manrope, system-ui, sans-serif;
+    }
+    main {
+      width: min(1220px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 38px 0 72px;
+    }
+    .intro {
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2 {
+      font-family: Anton, Impact, sans-serif;
+      font-weight: 400;
+      line-height: .9;
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 780px;
+      margin-bottom: 12px;
+      font-size: clamp(64px, 10vw, 138px);
+    }
+    p {
+      color: rgba(246, 255, 245, .72);
+      font-size: 18px;
+      line-height: 1.5;
+    }
+    .logo-board {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+    .card {
+      min-height: 650px;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 22px;
+      padding: 22px;
+      border: 1px solid rgba(246, 255, 245, .14);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, .035);
+    }
+    .stage {
+      display: grid;
+      place-items: center;
+      min-height: 360px;
+      padding: 20px;
+      border: 1px solid rgba(246, 255, 245, .1);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(246,255,245,.035) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(246,255,245,.035) 1px, transparent 1px),
+        #08120b;
+      background-size: 44px 44px;
+    }
+    .logo-stack {
+      display: grid;
+      gap: 22px;
+      justify-items: center;
+    }
+    svg { max-width: 100%; height: auto; }
+    .mini-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+    }
+    .mini-row svg {
+      width: 54px;
+      height: 54px;
+    }
+    .card h2 {
+      margin-bottom: 8px;
+      font-size: 34px;
+    }
+    .card p {
+      margin-bottom: 0;
+      font-size: 15px;
+    }
+    .fit-note {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .fit-note span {
+      padding: 6px 9px;
+      color: var(--night);
+      background: var(--green);
+      border-radius: 8px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .fit-note span:nth-child(2) { background: var(--cyan); }
+    .fit-note span:nth-child(3) { background: var(--coral); }
+    .dark-chip {
+      padding: 10px 12px;
+      border: 1px solid rgba(246, 255, 245, .14);
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+    }
+    @media (max-width: 980px) {
+      .logo-board { grid-template-columns: 1fr; }
+      .card { min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">Logo lab / not installed anywhere</p>
+      <h1>Rio Fit Club Logo Directions</h1>
+      <p>Three cleaner attempts. The goal here is stronger and less busy: an ownable mark, a confident wordmark, and enough Rio energy without turning into a generic gym badge.</p>
+    </section>
+
+    <section class="logo-board" aria-label="Rio Fit Club logo options">
+      <article class="card">
+        <div>
+          <h2>01 / Axis</h2>
+          <p>A sharp RFC monogram inside a tilted field mark. Feels more like a modern club emblem: strong for apparel, signage, and an app icon.</p>
+        </div>
+        <div class="stage">
+          <div class="logo-stack">
+            <svg width="310" height="310" viewBox="0 0 310 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club Axis mark">
+              <rect width="310" height="310" rx="58" fill="#07100A"/>
+              <path d="M77 212L111 71H231L198 212H77Z" fill="#F6FFF5"/>
+              <path d="M103 191L126 91H207L184 191H103Z" fill="#07100A"/>
+              <path d="M120 167H169C189 167 204 154 208 136C212 116 199 103 176 103H118" stroke="#F6FFF5" stroke-width="18" stroke-linecap="square" stroke-linejoin="miter"/>
+              <path d="M111 212L133 119" stroke="#F6FFF5" stroke-width="18" stroke-linecap="square"/>
+              <path d="M164 168L204 211" stroke="#F6FFF5" stroke-width="18" stroke-linecap="square"/>
+              <path d="M69 238H192" stroke="#1FFFA3" stroke-width="10" stroke-linecap="square"/>
+              <path d="M207 238H246" stroke="#18D4E7" stroke-width="10" stroke-linecap="square"/>
+              <path d="M62 54H112" stroke="#FF6A4D" stroke-width="10" stroke-linecap="square"/>
+            </svg>
+            <svg width="330" height="116" viewBox="0 0 330 116" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club Axis wordmark">
+              <text x="0" y="56" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="54" letter-spacing="0">RIO FIT</text>
+              <text x="2" y="98" fill="#1FFFA3" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="900" letter-spacing="9">CLUB</text>
+              <path d="M139 90H238" stroke="#18D4E7" stroke-width="6"/>
+              <path d="M248 90H289" stroke="#FF6A4D" stroke-width="6"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="mini-row">
+            <svg viewBox="0 0 310 310" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="310" height="310" rx="58" fill="#07100A"/><path d="M77 212L111 71H231L198 212H77Z" fill="#F6FFF5"/><path d="M103 191L126 91H207L184 191H103Z" fill="#07100A"/><path d="M120 167H169C189 167 204 154 208 136C212 116 199 103 176 103H118" stroke="#F6FFF5" stroke-width="18"/><path d="M111 212L133 119" stroke="#F6FFF5" stroke-width="18"/><path d="M164 168L204 211" stroke="#F6FFF5" stroke-width="18"/><path d="M69 238H192" stroke="#1FFFA3" stroke-width="10"/><path d="M207 238H246" stroke="#18D4E7" stroke-width="10"/><path d="M62 54H112" stroke="#FF6A4D" stroke-width="10"/></svg>
+            <span class="dark-chip">Best for merch</span>
+          </div>
+          <div class="fit-note"><span>Strong</span><span>Modern</span><span>Club</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>02 / Rio Ring</h2>
+          <p>A cleaner social-club symbol: R inside an open ring, with three color cuts for training, language, and gatherings. Less aggressive, more lifestyle.</p>
+        </div>
+        <div class="stage">
+          <div class="logo-stack">
+            <svg width="310" height="310" viewBox="0 0 310 310" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club Rio Ring mark">
+              <rect width="310" height="310" rx="155" fill="#07100A"/>
+              <circle cx="155" cy="155" r="105" stroke="#F6FFF5" stroke-width="18"/>
+              <path d="M76 85C104 54 150 43 191 56" stroke="#18D4E7" stroke-width="18" stroke-linecap="round"/>
+              <path d="M219 68C248 90 264 124 261 160" stroke="#1FFFA3" stroke-width="18" stroke-linecap="round"/>
+              <path d="M229 218C204 247 162 261 123 252" stroke="#FF6A4D" stroke-width="18" stroke-linecap="round"/>
+              <path d="M113 222V87H172C209 87 232 107 232 138C232 165 214 184 184 189L231 222H191L151 193H146V222H113Z" fill="#F6FFF5"/>
+              <path d="M146 121V163H168C187 163 199 155 199 142C199 129 188 121 169 121H146Z" fill="#07100A"/>
+            </svg>
+            <svg width="330" height="118" viewBox="0 0 330 118" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club Rio Ring wordmark">
+              <text x="0" y="54" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="50" letter-spacing="0">RIO FIT CLUB</text>
+              <text x="4" y="94" fill="#B9CBBC" font-family="Manrope, Arial, sans-serif" font-size="14" font-weight="900" letter-spacing="5">LANGUAGE / FITNESS / RIO ACCESS</text>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="mini-row">
+            <svg viewBox="0 0 310 310" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="310" height="310" rx="155" fill="#07100A"/><circle cx="155" cy="155" r="105" stroke="#F6FFF5" stroke-width="18"/><path d="M76 85C104 54 150 43 191 56" stroke="#18D4E7" stroke-width="18" stroke-linecap="round"/><path d="M219 68C248 90 264 124 261 160" stroke="#1FFFA3" stroke-width="18" stroke-linecap="round"/><path d="M229 218C204 247 162 261 123 252" stroke="#FF6A4D" stroke-width="18" stroke-linecap="round"/><path d="M113 222V87H172C209 87 232 107 232 138C232 165 214 184 184 189L231 222H191L151 193H146V222H113Z" fill="#F6FFF5"/><path d="M146 121V163H168C187 163 199 155 199 142C199 129 188 121 169 121H146Z" fill="#07100A"/></svg>
+            <span class="dark-chip">Best all-around</span>
+          </div>
+          <div class="fit-note"><span>Social</span><span>Flexible</span><span>Premium</span></div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div>
+          <h2>03 / Wordmark</h2>
+          <p>A typography-led identity. The mark is the name itself, with a small motion slash. Cleaner, more fashion/streetwear, less icon-first.</p>
+        </div>
+        <div class="stage">
+          <div class="logo-stack">
+            <svg width="330" height="250" viewBox="0 0 330 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club bold wordmark">
+              <rect width="330" height="250" rx="18" fill="#07100A"/>
+              <path d="M48 43H286" stroke="#18D4E7" stroke-width="9"/>
+              <path d="M78 62H285" stroke="#1FFFA3" stroke-width="9"/>
+              <path d="M46 188H188" stroke="#FF6A4D" stroke-width="9"/>
+              <text x="42" y="126" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="78" letter-spacing="0">RIO</text>
+              <text x="42" y="192" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="78" letter-spacing="0">FIT</text>
+              <text x="207" y="192" fill="#1FFFA3" font-family="Anton, Impact, sans-serif" font-size="78" letter-spacing="0">CLUB</text>
+            </svg>
+            <svg width="160" height="160" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rio Fit Club wordmark icon">
+              <rect width="160" height="160" rx="28" fill="#07100A"/>
+              <text x="29" y="78" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="62">R</text>
+              <text x="68" y="78" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="62">F</text>
+              <text x="107" y="78" fill="#1FFFA3" font-family="Anton, Impact, sans-serif" font-size="62">C</text>
+              <path d="M28 111H78" stroke="#18D4E7" stroke-width="8"/>
+              <path d="M86 111H133" stroke="#FF6A4D" stroke-width="8"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <div class="mini-row">
+            <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="160" height="160" rx="28" fill="#07100A"/><text x="29" y="78" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="62">R</text><text x="68" y="78" fill="#F6FFF5" font-family="Anton, Impact, sans-serif" font-size="62">F</text><text x="107" y="78" fill="#1FFFA3" font-family="Anton, Impact, sans-serif" font-size="62">C</text><path d="M28 111H78" stroke="#18D4E7" stroke-width="8"/><path d="M86 111H133" stroke="#FF6A4D" stroke-width="8"/></svg>
+            <span class="dark-chip">Best for streetwear</span>
+          </div>
+          <div class="fit-note"><span>Clean</span><span>Bold</span><span>Timeless</span></div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
