@@ -1,5 +1,19 @@
 {
   "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ingles.riofitclub.com" }],
+      "destination": "/silva",
+      "permanent": false
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "silva-fitness-ingles.vercel.app" }],
+      "destination": "/silva",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     { "source": "/student/:handle", "destination": "/api/student-page?handle=:handle" }
   ],
