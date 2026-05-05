@@ -11,6 +11,16 @@
       "has": [{ "type": "host", "value": "www.riofitclub.com" }],
       "destination": "/riofitclub-home.html"
     },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "ingles.riofitclub.com" }],
+      "destination": "/silva.html"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "silva-fitness-ingles.vercel.app" }],
+      "destination": "/silva.html"
+    },
     { "source": "/student/:handle", "destination": "/api/student-page?handle=:handle" }
   ],
   "crons": [
